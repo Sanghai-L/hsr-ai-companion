@@ -1,0 +1,9 @@
+{
+  "synthetic": true,
+  "http_status": 424,
+  "body": {},
+  "expected": {
+    "error": "maintenance",
+    "preserve_previous": true
+  }
+}

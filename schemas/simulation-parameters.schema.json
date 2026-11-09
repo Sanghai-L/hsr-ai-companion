@@ -1,0 +1,882 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "scenario_id": {
+      "enum": [
+        "alpha-moc"
+      ]
+    },
+    "build": {
+      "type": "object",
+      "properties": {
+        "origin": {
+          "enum": [
+            "account",
+            "manual",
+            "hypothesis",
+            "synthetic"
+          ]
+        },
+        "snapshot_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 80
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "members": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "character_id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 80
+              },
+              "form_id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              },
+              "ownership": {
+                "enum": [
+                  "owned",
+                  "not_owned",
+                  "unknown"
+                ]
+              },
+              "level": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 80
+              },
+              "promotion": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 6
+              },
+              "eidolon": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 6
+              },
+              "skill_levels": {
+                "type": "object",
+                "properties": {
+                  "basic": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 7
+                  },
+                  "skill": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 15
+                  },
+                  "ultimate": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 15
+                  },
+                  "talent": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 15
+                  }
+                },
+                "required": [
+                  "basic",
+                  "skill",
+                  "ultimate",
+                  "talent"
+                ],
+                "additionalProperties": false,
+                "description": "星魂加成前的技能等级；后端自行应用E3/E5。展示等级不经核对不能直接当作基础等级。"
+              },
+              "trace_policy": {
+                "enum": [
+                  "all_unlocked",
+                  "partial",
+                  "unknown"
+                ]
+              },
+              "light_cone": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "entity_id": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 80
+                      },
+                      "instance_id": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 80
+                      },
+                      "level": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 80
+                      },
+                      "promotion": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 6
+                      },
+                      "superimposition": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 5
+                      },
+                      "path": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 40
+                      },
+                      "source_ref": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 2000
+                      }
+                    },
+                    "required": [
+                      "entity_id",
+                      "instance_id",
+                      "level",
+                      "promotion",
+                      "superimposition",
+                      "path",
+                      "source_ref"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "relics": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "entity_id": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 80
+                    },
+                    "instance_id": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 80
+                    },
+                    "set_id": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 80
+                    },
+                    "slot": {
+                      "enum": [
+                        "head",
+                        "hands",
+                        "body",
+                        "feet",
+                        "sphere",
+                        "rope"
+                      ]
+                    },
+                    "level": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 15
+                    },
+                    "rarity": {
+                      "type": "integer",
+                      "minimum": 2,
+                      "maximum": 5
+                    },
+                    "main_stat": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 80
+                    },
+                    "main_value": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1000000
+                    },
+                    "sub_values": {
+                      "type": "object",
+                      "maxProperties": 4,
+                      "additionalProperties": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1000000
+                      }
+                    },
+                    "source_ref": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 2000
+                    }
+                  },
+                  "required": [
+                    "entity_id",
+                    "instance_id",
+                    "set_id",
+                    "slot",
+                    "level",
+                    "rarity",
+                    "main_stat",
+                    "main_value",
+                    "sub_values",
+                    "source_ref"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 0,
+                "maxItems": 6
+              },
+              "attributes": {
+                "type": "object",
+                "properties": {
+                  "hp": {
+                    "type": "object",
+                    "properties": {
+                      "value": {
+                        "anyOf": [
+                          {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1000000
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "basis": {
+                        "enum": [
+                          "base",
+                          "equipment_bonus",
+                          "public_panel"
+                        ]
+                      },
+                      "precision": {
+                        "anyOf": [
+                          {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 100
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "source_ref": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 2000
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "basis",
+                      "precision",
+                      "source_ref"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "atk": {
+                    "type": "object",
+                    "properties": {
+                      "value": {
+                        "anyOf": [
+                          {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1000000
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "basis": {
+                        "enum": [
+                          "base",
+                          "equipment_bonus",
+                          "public_panel"
+                        ]
+                      },
+                      "precision": {
+                        "anyOf": [
+                          {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 100
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "source_ref": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 2000
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "basis",
+                      "precision",
+                      "source_ref"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "def": {
+                    "type": "object",
+                    "properties": {
+                      "value": {
+                        "anyOf": [
+                          {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1000000
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "basis": {
+                        "enum": [
+                          "base",
+                          "equipment_bonus",
+                          "public_panel"
+                        ]
+                      },
+                      "precision": {
+                        "anyOf": [
+                          {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 100
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "source_ref": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 2000
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "basis",
+                      "precision",
+                      "source_ref"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "spd": {
+                    "type": "object",
+                    "properties": {
+                      "value": {
+                        "anyOf": [
+                          {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1000000
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "basis": {
+                        "enum": [
+                          "base",
+                          "equipment_bonus",
+                          "public_panel"
+                        ]
+                      },
+                      "precision": {
+                        "anyOf": [
+                          {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 100
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "source_ref": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 2000
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "basis",
+                      "precision",
+                      "source_ref"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "crit_rate": {
+                    "type": "object",
+                    "properties": {
+                      "value": {
+                        "anyOf": [
+                          {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1000000
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "basis": {
+                        "enum": [
+                          "base",
+                          "equipment_bonus",
+                          "public_panel"
+                        ]
+                      },
+                      "precision": {
+                        "anyOf": [
+                          {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 100
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "source_ref": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 2000
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "basis",
+                      "precision",
+                      "source_ref"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "crit_dmg": {
+                    "type": "object",
+                    "properties": {
+                      "value": {
+                        "anyOf": [
+                          {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1000000
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "basis": {
+                        "enum": [
+                          "base",
+                          "equipment_bonus",
+                          "public_panel"
+                        ]
+                      },
+                      "precision": {
+                        "anyOf": [
+                          {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 100
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "source_ref": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 2000
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "basis",
+                      "precision",
+                      "source_ref"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "break_effect": {
+                    "type": "object",
+                    "properties": {
+                      "value": {
+                        "anyOf": [
+                          {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1000000
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "basis": {
+                        "enum": [
+                          "base",
+                          "equipment_bonus",
+                          "public_panel"
+                        ]
+                      },
+                      "precision": {
+                        "anyOf": [
+                          {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 100
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "source_ref": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 2000
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "basis",
+                      "precision",
+                      "source_ref"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "energy_regen": {
+                    "type": "object",
+                    "properties": {
+                      "value": {
+                        "anyOf": [
+                          {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1000000
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "basis": {
+                        "enum": [
+                          "base",
+                          "equipment_bonus",
+                          "public_panel"
+                        ]
+                      },
+                      "precision": {
+                        "anyOf": [
+                          {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 100
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "source_ref": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 2000
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "basis",
+                      "precision",
+                      "source_ref"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "effect_hit": {
+                    "type": "object",
+                    "properties": {
+                      "value": {
+                        "anyOf": [
+                          {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1000000
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "basis": {
+                        "enum": [
+                          "base",
+                          "equipment_bonus",
+                          "public_panel"
+                        ]
+                      },
+                      "precision": {
+                        "anyOf": [
+                          {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 100
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "source_ref": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 2000
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "basis",
+                      "precision",
+                      "source_ref"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "effect_res": {
+                    "type": "object",
+                    "properties": {
+                      "value": {
+                        "anyOf": [
+                          {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1000000
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "basis": {
+                        "enum": [
+                          "base",
+                          "equipment_bonus",
+                          "public_panel"
+                        ]
+                      },
+                      "precision": {
+                        "anyOf": [
+                          {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 100
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "source_ref": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 2000
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "basis",
+                      "precision",
+                      "source_ref"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "additionalProperties": false
+              },
+              "source_refs": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 2000
+                },
+                "minItems": 1,
+                "maxItems": 30
+              }
+            },
+            "required": [
+              "character_id",
+              "form_id",
+              "ownership",
+              "level",
+              "promotion",
+              "eidolon",
+              "skill_levels",
+              "trace_policy",
+              "light_cone",
+              "relics",
+              "attributes",
+              "source_refs"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "assumptions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1500
+          },
+          "minItems": 0,
+          "maxItems": 30
+        }
+      },
+      "required": [
+        "origin",
+        "snapshot_id",
+        "members",
+        "assumptions"
+      ],
+      "additionalProperties": false
+    },
+    "initial_resources": {
+      "type": "object",
+      "properties": {
+        "skill_points": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "energy_ratio": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "techniques": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "minItems": 0,
+          "maxItems": 4
+        },
+        "source_ref": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        }
+      },
+      "required": [
+        "skill_points",
+        "energy_ratio",
+        "techniques",
+        "source_ref"
+      ],
+      "additionalProperties": false
+    },
+    "policy": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "enum": [
+            "p0-bounded"
+          ]
+        },
+        "skill_threshold": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "support_target_form_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "skill_threshold",
+        "support_target_form_id"
+      ],
+      "additionalProperties": false
+    },
+    "mode": {
+      "enum": [
+        "roll",
+        "expected"
+      ]
+    },
+    "seed": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4294967295
+    },
+    "precision": {
+      "enum": [
+        "model_diagnostic",
+        "high"
+      ]
+    }
+  },
+  "required": [
+    "scenario_id",
+    "build",
+    "initial_resources",
+    "policy",
+    "mode",
+    "seed",
+    "precision"
+  ],
+  "additionalProperties": false
+}

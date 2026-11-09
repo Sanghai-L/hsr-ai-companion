@@ -1,0 +1,182 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "kind": {
+      "enum": [
+        "damage",
+        "timeline",
+        "gacha",
+        "pull_plan",
+        "simulation"
+      ]
+    },
+    "conditions": {
+      "type": "object",
+      "properties": {
+        "game_version": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 40
+        },
+        "mode": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "investment": {
+          "enum": [
+            "real_account",
+            "equal_investment",
+            "ideal_upper_bound",
+            "synthetic"
+          ]
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        },
+        "snapshot_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "game_version",
+        "mode",
+        "investment",
+        "notes"
+      ],
+      "additionalProperties": false
+    },
+    "versions": {
+      "type": "object",
+      "properties": {
+        "engine": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "description": "当前安装的执行版本，由 calculation_schema 返回"
+        },
+        "rules": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "description": "当前受控计算规则版本，必须为 p3-1"
+        },
+        "knowledge": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "data": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        }
+      },
+      "required": [
+        "engine",
+        "rules",
+        "knowledge",
+        "data"
+      ],
+      "additionalProperties": false
+    },
+    "budget": {
+      "type": "object",
+      "properties": {
+        "max_events": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 300
+        },
+        "max_av": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 100000
+        },
+        "max_transitions": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3000000
+        },
+        "max_seconds": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 30
+        }
+      },
+      "required": [
+        "max_events",
+        "max_av",
+        "max_transitions",
+        "max_seconds"
+      ],
+      "additionalProperties": false
+    },
+    "parameters": {
+      "type": "object",
+      "maxProperties": 40
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 1500
+      },
+      "maxItems": 30,
+      "minItems": 0
+    },
+    "source_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 2000
+      },
+      "maxItems": 30,
+      "minItems": 1
+    },
+    "run": {
+      "type": "object",
+      "properties": {
+        "task_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "started_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema_version",
+    "kind",
+    "conditions",
+    "versions",
+    "budget",
+    "parameters",
+    "assumptions",
+    "source_refs"
+  ],
+  "additionalProperties": false
+}

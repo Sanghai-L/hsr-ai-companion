@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "id": "alpha-moc",
+      "mode": "memory-of-chaos",
+      "status": "FROZEN_WITH_DECLARED_GAPS",
+      "scenario": {
+        "game_version": "4.4",
+        "period_key": "4.4.1",
+        "hakushin_period_id": "1034",
+        "floor": 12,
+        "side": "upper",
+        "region": "source-unspecified",
+        "missing_fields": [
+          "区服及时区确证",
+          "实际游戏初始能量／秘技",
+          "正式关卡敌人完整技能、抗性与阶段交互的执行验证",
+          "与游戏控制实测对齐",
+          "当前 4.6 混沌期数时效验证"
+        ],
+        "snapshot": ".local/benchmarks/seed-scenario/scenario.json",
+        "sha256": "a5e802a2e7eb278716b0fbf666f3080bee324358104761af445047988e6fde12",
+        "distribution": "pointer-only; raw game data excluded"
+      },
+      "teams": [
+        {
+          "id": "team-a",
+          "candidate_entity_ids": [
+            "1408",
+            "1412",
+            "1313",
+            "1414"
+          ],
+          "names": [
+            "白厄",
+            "刻律德菈",
+            "星期日",
+            "丹恒•腾荒"
+          ],
+          "candidate_evidence": "HSR_Nous data/battles/demo_白厄队.yaml",
+          "runnable": true,
+          "replay_identical": true,
+          "strict_scenario_supported": false,
+          "coverage": "engineering approximation; blocked for game recommendations",
+          "caveat_count": 4,
+          "evidence": ".local/evidence/D008/team-a-run-1.json"
+        },
+        {
+          "id": "team-b",
+          "candidate_entity_ids": [
+            "1308",
+            "1006",
+            "1106",
+            "1304"
+          ],
+          "names": [
+            "黄泉",
+            "银狼",
+            "佩拉",
+            "砂金"
+          ],
+          "candidate_evidence": "HSR_Nous data/library/characters，模板存在；四人组合待实跑",
+          "runnable": true,
+          "replay_identical": true,
+          "strict_scenario_supported": false,
+          "coverage": "engineering approximation; blocked for game recommendations",
+          "caveat_count": 37,
+          "evidence": ".local/evidence/D008/team-b-run-1.json"
+        }
+      ],
+      "team_selection": "P0 工程候选；正式产品验收队伍后续再确认",
+      "unknown_build_fields": [
+        "星魂",
+        "光锥与叠影",
+        "遗器",
+        "精确属性",
+        "策略"
+      ],
+      "seed": 42,
+      "prohibitions": [
+        "不把未知持有当未持有",
+        "不把 demo 假人命名为正式混沌",
+        "不声称游戏精度已通过"
+      ],
+      "representative": {
+        "path": "benchmarks/modes/moc/representative-v1.json",
+        "sha256": "da4f918b2ea5641bd8dc812477aaa4a71a5ae4c4f60349b6bb7a2009beac77bd",
+        "method": "representative-1",
+        "kind": "representative"
+      }
+    }
+  ],
+  "p4_development": {
+    "status": "IN_PROGRESS_SIMPLIFIED_SCOPE",
+    "source_aligned_candidate": ".local/benchmarks/user-selected-moc-1036-11/scenario-candidate.json",
+    "selected_rosters": ".local/benchmarks/user-selected-moc-1036-11/selected-rosters.json",
+    "complete_supported": false,
+    "historical_case_preserved": true,
+    "manual_observation": "DEFERRED_BY_USER",
+    "scope_revision": "scope-20261108-simplified-combat",
+    "updated_at": "2026-11-08T11:18:15+00:00",
+    "manual_observation_required": false,
+    "simplified_comparison_implemented": false,
+    "required_work": [
+      "代表性配置与有依据的关键循环",
+      "按指标预检与最小构筑字段投影",
+      "D039～D042实际实现和验收"
+    ],
+    "optional_full_model_limits": [
+      "完整敌人AI和全部阶段",
+      "逐事件/整场游戏校准"
+    ],
+    "critical_scope_note": "角色核心机制仍按所选方法核验；可先采用其他有依据工程队伍，不能将缺失贡献当零。"
+  },
+  "p4_development_history": [
+    {
+      "superseded_by": "scope-20261108-simplified-combat",
+      "record": {
+        "status": "D038_BLOCKED",
+        "source_aligned_candidate": ".local/benchmarks/user-selected-moc-1036-11/scenario-candidate.json",
+        "selected_rosters": ".local/benchmarks/user-selected-moc-1036-11/selected-rosters.json",
+        "complete_supported": false,
+        "historical_case_preserved": true,
+        "manual_observation": "DEFERRED_BY_USER"
+      }
+    }
+  ]
+}

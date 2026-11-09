@@ -1,0 +1,25 @@
+{
+  "synthetic": true,
+  "http_status": 200,
+  "body": {
+    "detailInfo": {
+      "avatarDetailList": [
+        {
+          "avatarId": 1001
+        }
+      ]
+    },
+    "ttl": 60
+  },
+  "expected": {
+    "level": null,
+    "rank": null,
+    "missing_fields": [
+      "level",
+      "rank",
+      "equipment",
+      "relicList",
+      "skillTreeList"
+    ]
+  }
+}

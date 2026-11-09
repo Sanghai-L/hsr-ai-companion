@@ -1,0 +1,44 @@
+{
+  "id": "sunday-advance",
+  "category": "characters",
+  "title": "星期日：角色和召唤物立即行动",
+  "aliases": [
+    "星期日",
+    "周日",
+    "星期天",
+    "拉条",
+    "1313"
+  ],
+  "version_min": "4.6",
+  "version_max": "4.6",
+  "information_state": "official_verified",
+  "evidence": "community",
+  "body_path": "characters/sunday-advance.md",
+  "namespace": "release",
+  "entities": [],
+  "conditions": [
+    "仅核对锁定 4.6 来源文本；不证明游戏内完整结算"
+  ],
+  "exceptions": [
+    "不能仅凭有召唤物便认定所有特殊单位都适用，需核对单位分类。"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "ref": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/dbe8cdfcfb0bf657b9fe1cf92d5537f118ccb487/index_new/cn/character_skills.json#/131302/desc",
+      "observed_at": "2026-11-08T03:35:24+00:00",
+      "license": "source rights reserved; facts paraphrased"
+    }
+  ],
+  "claims": [
+    {
+      "claim": "星期日战技使目标角色及其召唤物立即行动，并提供增伤；对同谐角色无法触发立即行动。对蒙福者施放战技还会返还战技点。",
+      "source_ref": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/dbe8cdfcfb0bf657b9fe1cf92d5537f118ccb487/index_new/cn/character_skills.json#/131302/desc",
+      "locator": "/131302/desc",
+      "source_sha256": "91e5e1b9f8456dceb4b0673f1d0362c6eeac2f0e50a0250d458cac08526262e0",
+      "verification": "source_text_checked; game-client interaction not verified"
+    }
+  ],
+  "verified_at": "2026-11-08T03:35:28+00:00",
+  "license": "Original factual summary; project distribution license undecided; game rights reserved"
+}

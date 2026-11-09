@@ -1,0 +1,43 @@
+{
+  "id": "acheron-stacks",
+  "category": "characters",
+  "title": "黄泉：残梦、集真赤与负面效果",
+  "aliases": [
+    "黄泉",
+    "残梦",
+    "集真赤",
+    "1308"
+  ],
+  "version_min": "4.6",
+  "version_max": "4.6",
+  "information_state": "official_verified",
+  "evidence": "community",
+  "body_path": "characters/acheron-stacks.md",
+  "namespace": "release",
+  "entities": [],
+  "conditions": [
+    "仅核对锁定 4.6 来源文本；不证明游戏内完整结算"
+  ],
+  "exceptions": [
+    "不是每段伤害都增加残梦，负面效果来源需逐项记录。"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "ref": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/dbe8cdfcfb0bf657b9fe1cf92d5537f118ccb487/index_new/cn/character_skills.json#/130804/desc",
+      "observed_at": "2026-11-08T03:35:24+00:00",
+      "license": "source rights reserved; facts paraphrased"
+    }
+  ],
+  "claims": [
+    {
+      "claim": "黄泉以残梦激活终结技，敌方被施加负面效果可触发天赋获取残梦与集真赤，文本含每次施放技能的触发次数限制。",
+      "source_ref": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/dbe8cdfcfb0bf657b9fe1cf92d5537f118ccb487/index_new/cn/character_skills.json#/130804/desc",
+      "locator": "/130804/desc",
+      "source_sha256": "91e5e1b9f8456dceb4b0673f1d0362c6eeac2f0e50a0250d458cac08526262e0",
+      "verification": "source_text_checked; game-client interaction not verified"
+    }
+  ],
+  "verified_at": "2026-11-08T03:35:28+00:00",
+  "license": "Original factual summary; project distribution license undecided; game rights reserved"
+}

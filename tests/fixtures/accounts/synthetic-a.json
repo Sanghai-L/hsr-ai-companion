@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "account_id": "synthetic-A",
+  "uid": null,
+  "region": "synthetic",
+  "roster_completeness": "partial",
+  "ownership_of_unlisted": "unknown",
+  "snapshot_at": "2026-11-06T00:00:00Z",
+  "characters": [
+    {
+      "entity_id": "1408",
+      "ownership": "owned",
+      "level": 80,
+      "eidolon": null,
+      "light_cone": null,
+      "relics": null,
+      "source": "synthetic-public-showcase"
+    },
+    {
+      "entity_id": "1412",
+      "ownership": "owned",
+      "level": 80,
+      "eidolon": null,
+      "light_cone": null,
+      "relics": null,
+      "source": "synthetic-public-showcase"
+    },
+    {
+      "entity_id": "1313",
+      "ownership": "owned",
+      "level": 80,
+      "eidolon": null,
+      "light_cone": null,
+      "relics": null,
+      "source": "synthetic-public-showcase"
+    },
+    {
+      "entity_id": "1414",
+      "ownership": "owned",
+      "level": 80,
+      "eidolon": null,
+      "light_cone": null,
+      "relics": null,
+      "source": "synthetic-public-showcase"
+    }
+  ],
+  "resources": {
+    "stellar_jade": {
+      "value": 12000,
+      "status": "known",
+      "source": "synthetic-manual"
+    },
+    "special_passes": {
+      "value": 10,
+      "status": "known",
+      "source": "synthetic-manual"
+    },
+    "character_pity": {
+      "value": null,
+      "status": "unknown",
+      "source": null
+    },
+    "character_guaranteed": {
+      "value": null,
+      "status": "unknown",
+      "source": null
+    },
+    "cone_pity": {
+      "value": null,
+      "status": "unknown",
+      "source": null
+    }
+  },
+  "manual_supplements": [
+    {
+      "field": "preference",
+      "value": "喜欢角色收集",
+      "source": "synthetic-manual"
+    }
+  ]
+}

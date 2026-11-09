@@ -1,0 +1,41 @@
+{
+  "id": "p3-original-pull-plan-cases-1",
+  "cases": [
+    {
+      "id": "one-target-three-incomes",
+      "request": "tests/fixtures/requests/pull-plan.json",
+      "option": "new-character",
+      "expected_probabilities": [
+        0.5,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "two-targets-shared-budget",
+      "option": "two-targets",
+      "expected_probabilities": [
+        0,
+        0.25,
+        0.75
+      ],
+      "proof": "costs 1/2 with probability .5 each; sum distribution: 2=.25, 3=.5, 4=.25"
+    },
+    {
+      "id": "unknown-future-banner",
+      "expect": "missing_schedule; no invented date"
+    },
+    {
+      "id": "duplicate-income",
+      "expect": "INVALID_INPUT"
+    },
+    {
+      "id": "unknown-pity",
+      "expect": "no guessed starting state"
+    },
+    {
+      "id": "no-comparable-battle-benefit",
+      "expect": "ranking=null; qualitative explanation; skip included"
+    }
+  ]
+}

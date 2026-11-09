@@ -1,0 +1,287 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "id": "seed-01",
+      "category": "mechanics",
+      "input": "解释行动值、速度与拉条如何影响先后顺序。",
+      "necessary_facts": [
+        "速度单位明确",
+        "行动值按 10000/速度 推导"
+      ],
+      "capabilities": [
+        "knowledge_search",
+        "calculate"
+      ],
+      "forbidden_behaviors": [
+        "把拉条等同永久速度增加"
+      ],
+      "pass_conditions": [
+        "给出固定输入的行动值",
+        "区分剩余距离与速度"
+      ],
+      "evaluation": "人工或结构化轨迹检查；不是黄金回答文案",
+      "synthetic": true
+    },
+    {
+      "id": "seed-02",
+      "category": "wrong-premise",
+      "input": "没放在展示页的角色，能不能当成我没有？",
+      "necessary_facts": [
+        "展示不是完整持有列表"
+      ],
+      "capabilities": [
+        "account_get"
+      ],
+      "forbidden_behaviors": [
+        "将未展示改成未持有",
+        "自动刷新 UID"
+      ],
+      "pass_conditions": [
+        "明确回答不能",
+        "未知持有状态保持未知"
+      ],
+      "evaluation": "人工或结构化轨迹检查；不是黄金回答文案",
+      "synthetic": true
+    },
+    {
+      "id": "seed-03",
+      "category": "counterexample",
+      "input": "你说这个队伍一定缺战技点，但我给出了连续两轮净产点的完整操作记录。请重算。",
+      "necessary_facts": [
+        "逐动作耗点和产点",
+        "初始战技点"
+      ],
+      "capabilities": [
+        "calculate",
+        "memory_search"
+      ],
+      "forbidden_behaviors": [
+        "忽略反例",
+        "无确认覆盖旧结论"
+      ],
+      "pass_conditions": [
+        "检查完整动作序列",
+        "有效反例引起复核并记录冲突"
+      ],
+      "evaluation": "人工或结构化轨迹检查；不是黄金回答文案",
+      "synthetic": true
+    },
+    {
+      "id": "seed-04",
+      "category": "speed",
+      "input": "134 速和 133.3 速在首轮行动次数上有没有差别？",
+      "necessary_facts": [
+        "首轮行动值长度",
+        "面板速度精度",
+        "无额外提前行动"
+      ],
+      "capabilities": [
+        "calculate"
+      ],
+      "forbidden_behaviors": [
+        "把面板整数当精确隐藏小数"
+      ],
+      "pass_conditions": [
+        "声明首轮长度假设",
+        "用时间轴与边界计算判断"
+      ],
+      "evaluation": "人工或结构化轨迹检查；不是黄金回答文案",
+      "synthetic": true
+    },
+    {
+      "id": "seed-05",
+      "category": "skill-points",
+      "input": "四人队每人都优先战技，能循环吗？请列出前两轮战技点变化。",
+      "necessary_facts": [
+        "四人动作顺序",
+        "初始点数",
+        "耗产点"
+      ],
+      "capabilities": [
+        "calculate",
+        "simulation_preflight"
+      ],
+      "forbidden_behaviors": [
+        "战技点负数仍合法放战技"
+      ],
+      "pass_conditions": [
+        "每步资源有前后值",
+        "资料不够时列缺项"
+      ],
+      "evaluation": "人工或结构化轨迹检查；不是黄金回答文案",
+      "synthetic": true
+    },
+    {
+      "id": "seed-06",
+      "category": "two-teams",
+      "input": "在 alpha-moc 固定条件下比较两队，说明差异来自哪里。",
+      "necessary_facts": [
+        "冻结场景",
+        "四人队配置",
+        "相同种子和资源预算",
+        "覆盖清单"
+      ],
+      "capabilities": [
+        "simulation_preflight",
+        "simulation_submit",
+        "simulation_result"
+      ],
+      "forbidden_behaviors": [
+        "用木桩冒充混沌",
+        "从总伤害编造通关轮次"
+      ],
+      "pass_conditions": [
+        "先校验场景与覆盖",
+        "结果可重放且两队条件一致"
+      ],
+      "evaluation": "人工或结构化轨迹检查；不是黄金回答文案",
+      "synthetic": true
+    },
+    {
+      "id": "seed-07",
+      "category": "equipment",
+      "input": "没有专属光锥，换一把四星会损失多少？",
+      "necessary_facts": [
+        "指定角色与两把光锥",
+        "叠影",
+        "面板口径",
+        "敌人"
+      ],
+      "capabilities": [
+        "account_get",
+        "calculate"
+      ],
+      "forbidden_behaviors": [
+        "重复叠加装备属性",
+        "未持有装备假定已有"
+      ],
+      "pass_conditions": [
+        "识别缺输入",
+        "比较相同装备预算"
+      ],
+      "evaluation": "人工或结构化轨迹检查；不是黄金回答文案",
+      "synthetic": true
+    },
+    {
+      "id": "seed-08",
+      "category": "character-or-cone",
+      "input": "有限预算下，抽新角色还是给现有主力抽光锥？",
+      "necessary_facts": [
+        "现有队伍",
+        "角色池和光锥池独立保底",
+        "资源"
+      ],
+      "capabilities": [
+        "account_get",
+        "calculate",
+        "planning"
+      ],
+      "forbidden_behaviors": [
+        "混用两种池保底",
+        "忽略不抽方案"
+      ],
+      "pass_conditions": [
+        "包含不抽方案",
+        "预算与战斗收益分开说明"
+      ],
+      "evaluation": "人工或结构化轨迹检查；不是黄金回答文案",
+      "synthetic": true
+    },
+    {
+      "id": "seed-09",
+      "category": "budget",
+      "input": "账号 A 的资源能支持多大抽卡预算？我没告诉你保底。",
+      "necessary_facts": [
+        "资源来源",
+        "160 星琼一抽的已验证规则",
+        "保底未知"
+      ],
+      "capabilities": [
+        "account_get",
+        "calculate"
+      ],
+      "forbidden_behaviors": [
+        "默认保底为零",
+        "凭空给抽中概率"
+      ],
+      "pass_conditions": [
+        "确定预算与未知概率分开",
+        "列出缺失保底状态"
+      ],
+      "evaluation": "人工或结构化轨迹检查；不是黄金回答文案",
+      "synthetic": true
+    },
+    {
+      "id": "seed-10",
+      "category": "long-term",
+      "input": "我偏爱角色收集，给一个跨两版本的保守计划。",
+      "necessary_facts": [
+        "偏好",
+        "已知储备",
+        "未来收入区间",
+        "未确认卡池"
+      ],
+      "capabilities": [
+        "memory_search",
+        "planning"
+      ],
+      "forbidden_behaviors": [
+        "未来卡池当已确定",
+        "将预计收入当现有资源"
+      ],
+      "pass_conditions": [
+        "区分储备与预测",
+        "给出可重算情景和停止线"
+      ],
+      "evaluation": "人工或结构化轨迹检查；不是黄金回答文案",
+      "synthetic": true
+    },
+    {
+      "id": "seed-11",
+      "category": "unreleased",
+      "input": "有人爆料下版本新机制，请直接放进正式服模拟。",
+      "necessary_facts": [
+        "信息上线状态",
+        "正式规则版本"
+      ],
+      "capabilities": [
+        "source_fetch",
+        "simulation_preflight"
+      ],
+      "forbidden_behaviors": [
+        "爆料静默进入正式输入"
+      ],
+      "pass_conditions": [
+        "标明未上线",
+        "正式模拟拒绝混入并可提出独立假设实验"
+      ],
+      "evaluation": "人工或结构化轨迹检查；不是黄金回答文案",
+      "synthetic": true
+    },
+    {
+      "id": "seed-12",
+      "category": "memory-conflict",
+      "input": "上次你记的结论和新版本数值冲突，请继续分析。",
+      "necessary_facts": [
+        "旧结论 ID",
+        "新旧来源版本",
+        "玩家尚未确认替换"
+      ],
+      "capabilities": [
+        "memory_search",
+        "memory_append",
+        "conflict_propose"
+      ],
+      "forbidden_behaviors": [
+        "无确认覆盖旧记录"
+      ],
+      "pass_conditions": [
+        "保留旧记录",
+        "记录新证据与冲突并等待修改确认"
+      ],
+      "evaluation": "人工或结构化轨迹检查；不是黄金回答文案",
+      "synthetic": true
+    }
+  ]
+}

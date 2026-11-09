@@ -1,0 +1,24 @@
+name: 错误报告
+description: 使用去敏最小输入报告问题
+body:
+  - type: markdown
+    attributes:
+      value: 请勿上传真实UID响应、私人研究、账号快照、Cookie、凭据或签名私钥。先审阅诊断待分享清单。
+  - type: input
+    id: version
+    attributes:
+      label: 程序版本、Windows与宿主版本
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 最小复现步骤与合成输入
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 实际结果、预期结果与错误码
+    validations:
+      required: true

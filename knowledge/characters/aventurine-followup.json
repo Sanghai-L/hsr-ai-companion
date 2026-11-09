@@ -1,0 +1,57 @@
+{
+  "id": "aventurine-followup",
+  "category": "characters",
+  "title": "砂金：坚垣筹码、盲注与追加攻击",
+  "aliases": [
+    "砂金",
+    "沙金",
+    "盲注",
+    "坚垣筹码",
+    "1304"
+  ],
+  "version_min": "4.6",
+  "version_max": "4.6",
+  "information_state": "official_verified",
+  "evidence": "community",
+  "body_path": "characters/aventurine-followup.md",
+  "namespace": "release",
+  "entities": [],
+  "conditions": [
+    "仅核对锁定 4.6 来源文本；不证明游戏内完整结算"
+  ],
+  "exceptions": [
+    "阈值和单次受击奖励要区分砂金自身与其他队友；不能把护盾当治疗。"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "ref": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/dbe8cdfcfb0bf657b9fe1cf92d5537f118ccb487/index_new/cn/character_skills.json#/130402/desc",
+      "observed_at": "2026-11-08T03:35:24+00:00",
+      "license": "source rights reserved; facts paraphrased"
+    },
+    {
+      "type": "web",
+      "ref": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/dbe8cdfcfb0bf657b9fe1cf92d5537f118ccb487/index_new/cn/character_skills.json#/130404/desc",
+      "observed_at": "2026-11-08T03:35:24+00:00",
+      "license": "source rights reserved; facts paraphrased"
+    }
+  ],
+  "claims": [
+    {
+      "claim": "砂金为全队提供可叠加且有上限的坚垣筹码。持盾目标受击为他积累盲注，达到阈值后发动多段追加攻击。",
+      "source_ref": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/dbe8cdfcfb0bf657b9fe1cf92d5537f118ccb487/index_new/cn/character_skills.json#/130402/desc",
+      "locator": "/130402/desc",
+      "source_sha256": "91e5e1b9f8456dceb4b0673f1d0362c6eeac2f0e50a0250d458cac08526262e0",
+      "verification": "source_text_checked; game-client interaction not verified"
+    },
+    {
+      "claim": "砂金为全队提供可叠加且有上限的坚垣筹码。持盾目标受击为他积累盲注，达到阈值后发动多段追加攻击。",
+      "source_ref": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/dbe8cdfcfb0bf657b9fe1cf92d5537f118ccb487/index_new/cn/character_skills.json#/130404/desc",
+      "locator": "/130404/desc",
+      "source_sha256": "91e5e1b9f8456dceb4b0673f1d0362c6eeac2f0e50a0250d458cac08526262e0",
+      "verification": "source_text_checked; game-client interaction not verified"
+    }
+  ],
+  "verified_at": "2026-11-08T03:35:28+00:00",
+  "license": "Original factual summary; project distribution license undecided; game rights reserved"
+}

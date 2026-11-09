@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "version_scope": "4.6 frozen source snapshot; not a game-client certification",
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/dbe8cdfcfb0bf657b9fe1cf92d5537f118ccb487/index_new/cn/character_skills.json",
+      "observed_at": "2026-11-08T03:35:24+00:00",
+      "sha256": "91e5e1b9f8456dceb4b0673f1d0362c6eeac2f0e50a0250d458cac08526262e0",
+      "bytes": 803123,
+      "private_path": ".local\\evidence\\D021\\sources\\character_skills.json",
+      "commit": "dbe8cdfcfb0bf657b9fe1cf92d5537f118ccb487",
+      "http_status": 200
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/dbe8cdfcfb0bf657b9fe1cf92d5537f118ccb487/index_new/cn/characters.json",
+      "observed_at": "2026-11-08T03:35:25+00:00",
+      "sha256": "084a5cdb420d071bb41f057f218b141ff1930fe7293a4d5d48a967cdf29e27bc",
+      "bytes": 105211,
+      "private_path": ".local\\evidence\\D021\\sources\\characters.json",
+      "commit": "dbe8cdfcfb0bf657b9fe1cf92d5537f118ccb487",
+      "http_status": 200
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/dbe8cdfcfb0bf657b9fe1cf92d5537f118ccb487/index_new/cn/paths.json",
+      "observed_at": "2026-11-08T03:35:26+00:00",
+      "sha256": "ed86537d2fa626fa13fa4f46d676eb13746336af0ae5025747e5de26527a8a9f",
+      "bytes": 3066,
+      "private_path": ".local\\evidence\\D021\\sources\\paths.json",
+      "commit": "dbe8cdfcfb0bf657b9fe1cf92d5537f118ccb487",
+      "http_status": 200
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/dbe8cdfcfb0bf657b9fe1cf92d5537f118ccb487/index_new/cn/elements.json",
+      "observed_at": "2026-11-08T03:35:27+00:00",
+      "sha256": "2c879352d6e5f8de32cd899923e7c53fce419df1c35984e800573b5c8161b2a7",
+      "bytes": 2223,
+      "private_path": ".local\\evidence\\D021\\sources\\elements.json",
+      "commit": "dbe8cdfcfb0bf657b9fe1cf92d5537f118ccb487",
+      "http_status": 200
+    },
+    {
+      "url": "https://raw.githubusercontent.com/EnkaNetwork/API-docs/b94bc40528941126590e0eefb0f03278e7a44ec8/api.md",
+      "observed_at": "2026-11-08T03:35:28+00:00",
+      "sha256": "7aea988658a6a58fb532ec77dadf4f303710140685811762ab30cc88890ef06c",
+      "bytes": 5751,
+      "private_path": ".local\\evidence\\D021\\sources\\enka-api.md",
+      "commit": "b94bc40528941126590e0eefb0f03278e7a44ec8",
+      "http_status": 200
+    }
+  ],
+  "distribution": "original factual paraphrases; raw game/source content excluded; project license undecided"
+}

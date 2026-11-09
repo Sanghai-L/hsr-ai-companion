@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "examples": [
+    {
+      "id": "single-target",
+      "case": "benchmarks/modes/moc/representative-v1.json",
+      "mechanism": "丹恒战技单体2.6倍率；每次消耗1战技点，其他三人普攻产点"
+    },
+    {
+      "id": "multi-target-threshold",
+      "case": "benchmarks/modes/pf/representative-v1.json",
+      "mechanism": "黑塔战技全体1.0＋高血线20%增伤；给定跨50%血线后全体0.4追加"
+    }
+  ],
+  "policy": "限定动作及条件，未经支持的新角色不纳入数值排名；面板均为假设，不代表当前meta或全角色覆盖"
+}

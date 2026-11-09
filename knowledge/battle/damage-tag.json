@@ -1,0 +1,43 @@
+{
+  "id": "damage-tag",
+  "category": "battle",
+  "title": "动画、反击与伤害类型标签",
+  "aliases": [
+    "反击",
+    "战技伤害",
+    "白厄反击",
+    "动画"
+  ],
+  "version_min": "4.6",
+  "version_max": "4.6",
+  "information_state": "official_verified",
+  "evidence": "community",
+  "body_path": "battle/damage-tag.md",
+  "namespace": "release",
+  "entities": [],
+  "conditions": [
+    "仅核对锁定 4.6 来源文本；不证明游戏内完整结算"
+  ],
+  "exceptions": [
+    "不能将这条特殊规定推广为所有角色的反击都算战技。"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "ref": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/dbe8cdfcfb0bf657b9fe1cf92d5537f118ccb487/index_new/cn/character_skills.json#/140809/desc",
+      "observed_at": "2026-11-08T03:35:24+00:00",
+      "license": "source rights reserved; facts paraphrased"
+    }
+  ],
+  "claims": [
+    {
+      "claim": "白厄变身后的特定反击在技能文本中被视为战技伤害。判断增益能否生效要看伤害标签，不能仅凭反击动画归为追加攻击。",
+      "source_ref": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/dbe8cdfcfb0bf657b9fe1cf92d5537f118ccb487/index_new/cn/character_skills.json#/140809/desc",
+      "locator": "/140809/desc",
+      "source_sha256": "91e5e1b9f8456dceb4b0673f1d0362c6eeac2f0e50a0250d458cac08526262e0",
+      "verification": "source_text_checked; game-client interaction not verified"
+    }
+  ],
+  "verified_at": "2026-11-08T03:35:28+00:00",
+  "license": "Original factual summary; project distribution license undecided; game rights reserved"
+}

@@ -1,0 +1,766 @@
+{
+  "request": {
+    "mode": "anomaly_arbitration",
+    "roster": {
+      "origin": "explicit_hypothesis",
+      "notes": "测试明确假设12名角色可用，无装备触发效果，不代表玩家持有",
+      "available_character_ids": [
+        "1002",
+        "1001",
+        "1105",
+        "1104",
+        "1013",
+        "1211",
+        "1203",
+        "1301",
+        "1312",
+        "1107",
+        "1221",
+        "1109"
+      ],
+      "available_equipment_instances": []
+    },
+    "slots": [
+      {
+        "id": "slot-0",
+        "stage_type": "knight",
+        "request": {
+          "schema_version": 1,
+          "method": "representative-1",
+          "mode": "anomaly_arbitration",
+          "game_version": "4.6",
+          "data_version": "released-kit-f8935ddb-p5-1",
+          "scenario": {
+            "id": "aa-representative-v1",
+            "period": "generic-no-current-claim",
+            "kind": "representative",
+            "enemy_level": 80,
+            "target_count": 3,
+            "resistance": {
+              "physical": 0,
+              "fire": 0,
+              "ice": 0,
+              "lightning": 0,
+              "wind": 0,
+              "imaginary": 0
+            },
+            "weaknesses": [
+              "wind",
+              "ice",
+              "physical"
+            ],
+            "window_av": 200,
+            "initial_sp": 3,
+            "sp_cap": 5,
+            "initial_energy_fraction": 0,
+            "phases": [
+              {
+                "until_av": 200,
+                "broken": false,
+                "damage_taken_multiplier": 1,
+                "toughness_available": true,
+                "hp_above_half": true,
+                "enemy_slowed": false
+              }
+            ],
+            "threshold_crossings": [],
+            "respawn_policy": "none",
+            "omitted": [
+              "省略敌人行动、存活、真实击破和关卡增益；同速按队内顺序行动",
+              "未解锁大行迹、无秘技／主动装备效果、无队友指向增益；不是玩家真实练度",
+              "固定高血线目标；伤害是输出容量，不反推HP、击杀或通关"
+            ]
+          },
+          "budget": {
+            "max_seconds": 5,
+            "max_actions": 120,
+            "max_candidates": 4
+          },
+          "candidates": [
+            {
+              "id": "pool-0",
+              "label": "丹恒单体＋三人普攻资源位",
+              "investment_key": "assumed-panels-v1",
+              "origin": "hypothesis",
+              "members": [
+                {
+                  "character_id": "1002",
+                  "form_id": "1002:base",
+                  "level": 80,
+                  "atk": 2000,
+                  "speed": 100,
+                  "speed_precision": null,
+                  "crit_rate": 0.5,
+                  "crit_damage": 1,
+                  "damage_bonus": 0,
+                  "energy_regen": 0,
+                  "eidolon": 0,
+                  "major_traces": false,
+                  "rotation": [
+                    "basic"
+                  ],
+                  "ultimate_policy": "never",
+                  "equipment_instances": [],
+                  "required_mechanisms": []
+                },
+                {
+                  "character_id": "1001",
+                  "form_id": "1001:base",
+                  "level": 80,
+                  "atk": 1000,
+                  "speed": 100,
+                  "speed_precision": null,
+                  "crit_rate": 0,
+                  "crit_damage": 0.5,
+                  "damage_bonus": 0,
+                  "energy_regen": 0,
+                  "eidolon": 0,
+                  "major_traces": false,
+                  "rotation": [
+                    "basic"
+                  ],
+                  "ultimate_policy": "never",
+                  "equipment_instances": [],
+                  "required_mechanisms": []
+                },
+                {
+                  "character_id": "1105",
+                  "form_id": "1105:base",
+                  "level": 80,
+                  "atk": 1000,
+                  "speed": 100,
+                  "speed_precision": null,
+                  "crit_rate": 0,
+                  "crit_damage": 0.5,
+                  "damage_bonus": 0,
+                  "energy_regen": 0,
+                  "eidolon": 0,
+                  "major_traces": false,
+                  "rotation": [
+                    "basic"
+                  ],
+                  "ultimate_policy": "never",
+                  "equipment_instances": [],
+                  "required_mechanisms": []
+                },
+                {
+                  "character_id": "1104",
+                  "form_id": "1104:base",
+                  "level": 80,
+                  "atk": 1000,
+                  "speed": 100,
+                  "speed_precision": null,
+                  "crit_rate": 0,
+                  "crit_damage": 0.5,
+                  "damage_bonus": 0,
+                  "energy_regen": 0,
+                  "eidolon": 0,
+                  "major_traces": false,
+                  "rotation": [
+                    "basic"
+                  ],
+                  "ultimate_policy": "never",
+                  "equipment_instances": [],
+                  "required_mechanisms": []
+                }
+              ]
+            },
+            {
+              "id": "pool-1",
+              "label": "丹恒单体＋三人普攻资源位",
+              "investment_key": "assumed-panels-v1",
+              "origin": "hypothesis",
+              "members": [
+                {
+                  "character_id": "1013",
+                  "form_id": "1013:base",
+                  "level": 80,
+                  "atk": 2000,
+                  "speed": 100,
+                  "speed_precision": null,
+                  "crit_rate": 0.5,
+                  "crit_damage": 1,
+                  "damage_bonus": 0,
+                  "energy_regen": 0,
+                  "eidolon": 0,
+                  "major_traces": false,
+                  "rotation": [
+                    "basic"
+                  ],
+                  "ultimate_policy": "never",
+                  "equipment_instances": [],
+                  "required_mechanisms": []
+                },
+                {
+                  "character_id": "1211",
+                  "form_id": "1211:base",
+                  "level": 80,
+                  "atk": 1000,
+                  "speed": 100,
+                  "speed_precision": null,
+                  "crit_rate": 0,
+                  "crit_damage": 0.5,
+                  "damage_bonus": 0,
+                  "energy_regen": 0,
+                  "eidolon": 0,
+                  "major_traces": false,
+                  "rotation": [
+                    "basic"
+                  ],
+                  "ultimate_policy": "never",
+                  "equipment_instances": [],
+                  "required_mechanisms": []
+                },
+                {
+                  "character_id": "1203",
+                  "form_id": "1203:base",
+                  "level": 80,
+                  "atk": 1000,
+                  "speed": 100,
+                  "speed_precision": null,
+                  "crit_rate": 0,
+                  "crit_damage": 0.5,
+                  "damage_bonus": 0,
+                  "energy_regen": 0,
+                  "eidolon": 0,
+                  "major_traces": false,
+                  "rotation": [
+                    "basic"
+                  ],
+                  "ultimate_policy": "never",
+                  "equipment_instances": [],
+                  "required_mechanisms": []
+                },
+                {
+                  "character_id": "1301",
+                  "form_id": "1301:base",
+                  "level": 80,
+                  "atk": 1000,
+                  "speed": 100,
+                  "speed_precision": null,
+                  "crit_rate": 0,
+                  "crit_damage": 0.5,
+                  "damage_bonus": 0,
+                  "energy_regen": 0,
+                  "eidolon": 0,
+                  "major_traces": false,
+                  "rotation": [
+                    "basic"
+                  ],
+                  "ultimate_policy": "never",
+                  "equipment_instances": [],
+                  "required_mechanisms": []
+                }
+              ]
+            }
+          ],
+          "assumptions": [
+            "明确的工程假设面板与固定输出窗口；不代表成熟配队推荐，示范单体／对群选择",
+            "血线、弱点和击破窗口是共同外部条件，未做整场游戏内校准",
+            "只比较一个骑士目标配置；三骑士／王棋合法编成另由多队分配处理，不推断当期敌人特性"
+          ],
+          "source_refs": [
+            "https://srl.keqingmains.com/characters/ice/herta",
+            "https://srl.keqingmains.com/characters/wind/dan-heng",
+            "https://srl.keqingmains.com/combat-mechanics/damage/damage-formula",
+            "https://github.com/pzc2004/HSR_Nous/tree/f8935ddb407b297732fbd3c624d55897e3e648b9/data/library/characters"
+          ]
+        }
+      },
+      {
+        "id": "slot-1",
+        "stage_type": "knight",
+        "request": {
+          "schema_version": 1,
+          "method": "representative-1",
+          "mode": "anomaly_arbitration",
+          "game_version": "4.6",
+          "data_version": "released-kit-f8935ddb-p5-1",
+          "scenario": {
+            "id": "aa-representative-v1",
+            "period": "generic-no-current-claim",
+            "kind": "representative",
+            "enemy_level": 80,
+            "target_count": 3,
+            "resistance": {
+              "physical": 0,
+              "fire": 0,
+              "ice": 0,
+              "lightning": 0,
+              "wind": 0,
+              "imaginary": 0
+            },
+            "weaknesses": [
+              "wind",
+              "ice",
+              "physical"
+            ],
+            "window_av": 200,
+            "initial_sp": 3,
+            "sp_cap": 5,
+            "initial_energy_fraction": 0,
+            "phases": [
+              {
+                "until_av": 200,
+                "broken": false,
+                "damage_taken_multiplier": 1,
+                "toughness_available": true,
+                "hp_above_half": true,
+                "enemy_slowed": false
+              }
+            ],
+            "threshold_crossings": [],
+            "respawn_policy": "none",
+            "omitted": [
+              "省略敌人行动、存活、真实击破和关卡增益；同速按队内顺序行动",
+              "未解锁大行迹、无秘技／主动装备效果、无队友指向增益；不是玩家真实练度",
+              "固定高血线目标；伤害是输出容量，不反推HP、击杀或通关"
+            ]
+          },
+          "budget": {
+            "max_seconds": 5,
+            "max_actions": 120,
+            "max_candidates": 4
+          },
+          "candidates": [
+            {
+              "id": "pool-1",
+              "label": "丹恒单体＋三人普攻资源位",
+              "investment_key": "assumed-panels-v1",
+              "origin": "hypothesis",
+              "members": [
+                {
+                  "character_id": "1013",
+                  "form_id": "1013:base",
+                  "level": 80,
+                  "atk": 2000,
+                  "speed": 100,
+                  "speed_precision": null,
+                  "crit_rate": 0.5,
+                  "crit_damage": 1,
+                  "damage_bonus": 0,
+                  "energy_regen": 0,
+                  "eidolon": 0,
+                  "major_traces": false,
+                  "rotation": [
+                    "basic"
+                  ],
+                  "ultimate_policy": "never",
+                  "equipment_instances": [],
+                  "required_mechanisms": []
+                },
+                {
+                  "character_id": "1211",
+                  "form_id": "1211:base",
+                  "level": 80,
+                  "atk": 1000,
+                  "speed": 100,
+                  "speed_precision": null,
+                  "crit_rate": 0,
+                  "crit_damage": 0.5,
+                  "damage_bonus": 0,
+                  "energy_regen": 0,
+                  "eidolon": 0,
+                  "major_traces": false,
+                  "rotation": [
+                    "basic"
+                  ],
+                  "ultimate_policy": "never",
+                  "equipment_instances": [],
+                  "required_mechanisms": []
+                },
+                {
+                  "character_id": "1203",
+                  "form_id": "1203:base",
+                  "level": 80,
+                  "atk": 1000,
+                  "speed": 100,
+                  "speed_precision": null,
+                  "crit_rate": 0,
+                  "crit_damage": 0.5,
+                  "damage_bonus": 0,
+                  "energy_regen": 0,
+                  "eidolon": 0,
+                  "major_traces": false,
+                  "rotation": [
+                    "basic"
+                  ],
+                  "ultimate_policy": "never",
+                  "equipment_instances": [],
+                  "required_mechanisms": []
+                },
+                {
+                  "character_id": "1301",
+                  "form_id": "1301:base",
+                  "level": 80,
+                  "atk": 1000,
+                  "speed": 100,
+                  "speed_precision": null,
+                  "crit_rate": 0,
+                  "crit_damage": 0.5,
+                  "damage_bonus": 0,
+                  "energy_regen": 0,
+                  "eidolon": 0,
+                  "major_traces": false,
+                  "rotation": [
+                    "basic"
+                  ],
+                  "ultimate_policy": "never",
+                  "equipment_instances": [],
+                  "required_mechanisms": []
+                }
+              ]
+            },
+            {
+              "id": "pool-2",
+              "label": "丹恒单体＋三人普攻资源位",
+              "investment_key": "assumed-panels-v1",
+              "origin": "hypothesis",
+              "members": [
+                {
+                  "character_id": "1312",
+                  "form_id": "1312:base",
+                  "level": 80,
+                  "atk": 2000,
+                  "speed": 100,
+                  "speed_precision": null,
+                  "crit_rate": 0.5,
+                  "crit_damage": 1,
+                  "damage_bonus": 0,
+                  "energy_regen": 0,
+                  "eidolon": 0,
+                  "major_traces": false,
+                  "rotation": [
+                    "basic"
+                  ],
+                  "ultimate_policy": "never",
+                  "equipment_instances": [],
+                  "required_mechanisms": []
+                },
+                {
+                  "character_id": "1107",
+                  "form_id": "1107:base",
+                  "level": 80,
+                  "atk": 1000,
+                  "speed": 100,
+                  "speed_precision": null,
+                  "crit_rate": 0,
+                  "crit_damage": 0.5,
+                  "damage_bonus": 0,
+                  "energy_regen": 0,
+                  "eidolon": 0,
+                  "major_traces": false,
+                  "rotation": [
+                    "basic"
+                  ],
+                  "ultimate_policy": "never",
+                  "equipment_instances": [],
+                  "required_mechanisms": []
+                },
+                {
+                  "character_id": "1221",
+                  "form_id": "1221:base",
+                  "level": 80,
+                  "atk": 1000,
+                  "speed": 100,
+                  "speed_precision": null,
+                  "crit_rate": 0,
+                  "crit_damage": 0.5,
+                  "damage_bonus": 0,
+                  "energy_regen": 0,
+                  "eidolon": 0,
+                  "major_traces": false,
+                  "rotation": [
+                    "basic"
+                  ],
+                  "ultimate_policy": "never",
+                  "equipment_instances": [],
+                  "required_mechanisms": []
+                },
+                {
+                  "character_id": "1109",
+                  "form_id": "1109:base",
+                  "level": 80,
+                  "atk": 1000,
+                  "speed": 100,
+                  "speed_precision": null,
+                  "crit_rate": 0,
+                  "crit_damage": 0.5,
+                  "damage_bonus": 0,
+                  "energy_regen": 0,
+                  "eidolon": 0,
+                  "major_traces": false,
+                  "rotation": [
+                    "basic"
+                  ],
+                  "ultimate_policy": "never",
+                  "equipment_instances": [],
+                  "required_mechanisms": []
+                }
+              ]
+            }
+          ],
+          "assumptions": [
+            "明确的工程假设面板与固定输出窗口；不代表成熟配队推荐，示范单体／对群选择",
+            "血线、弱点和击破窗口是共同外部条件，未做整场游戏内校准",
+            "只比较一个骑士目标配置；三骑士／王棋合法编成另由多队分配处理，不推断当期敌人特性"
+          ],
+          "source_refs": [
+            "https://srl.keqingmains.com/characters/ice/herta",
+            "https://srl.keqingmains.com/characters/wind/dan-heng",
+            "https://srl.keqingmains.com/combat-mechanics/damage/damage-formula",
+            "https://github.com/pzc2004/HSR_Nous/tree/f8935ddb407b297732fbd3c624d55897e3e648b9/data/library/characters"
+          ]
+        }
+      },
+      {
+        "id": "slot-2",
+        "stage_type": "knight",
+        "request": {
+          "schema_version": 1,
+          "method": "representative-1",
+          "mode": "anomaly_arbitration",
+          "game_version": "4.6",
+          "data_version": "released-kit-f8935ddb-p5-1",
+          "scenario": {
+            "id": "aa-representative-v1",
+            "period": "generic-no-current-claim",
+            "kind": "representative",
+            "enemy_level": 80,
+            "target_count": 3,
+            "resistance": {
+              "physical": 0,
+              "fire": 0,
+              "ice": 0,
+              "lightning": 0,
+              "wind": 0,
+              "imaginary": 0
+            },
+            "weaknesses": [
+              "wind",
+              "ice",
+              "physical"
+            ],
+            "window_av": 200,
+            "initial_sp": 3,
+            "sp_cap": 5,
+            "initial_energy_fraction": 0,
+            "phases": [
+              {
+                "until_av": 200,
+                "broken": false,
+                "damage_taken_multiplier": 1,
+                "toughness_available": true,
+                "hp_above_half": true,
+                "enemy_slowed": false
+              }
+            ],
+            "threshold_crossings": [],
+            "respawn_policy": "none",
+            "omitted": [
+              "省略敌人行动、存活、真实击破和关卡增益；同速按队内顺序行动",
+              "未解锁大行迹、无秘技／主动装备效果、无队友指向增益；不是玩家真实练度",
+              "固定高血线目标；伤害是输出容量，不反推HP、击杀或通关"
+            ]
+          },
+          "budget": {
+            "max_seconds": 5,
+            "max_actions": 120,
+            "max_candidates": 4
+          },
+          "candidates": [
+            {
+              "id": "pool-2",
+              "label": "丹恒单体＋三人普攻资源位",
+              "investment_key": "assumed-panels-v1",
+              "origin": "hypothesis",
+              "members": [
+                {
+                  "character_id": "1312",
+                  "form_id": "1312:base",
+                  "level": 80,
+                  "atk": 2000,
+                  "speed": 100,
+                  "speed_precision": null,
+                  "crit_rate": 0.5,
+                  "crit_damage": 1,
+                  "damage_bonus": 0,
+                  "energy_regen": 0,
+                  "eidolon": 0,
+                  "major_traces": false,
+                  "rotation": [
+                    "basic"
+                  ],
+                  "ultimate_policy": "never",
+                  "equipment_instances": [],
+                  "required_mechanisms": []
+                },
+                {
+                  "character_id": "1107",
+                  "form_id": "1107:base",
+                  "level": 80,
+                  "atk": 1000,
+                  "speed": 100,
+                  "speed_precision": null,
+                  "crit_rate": 0,
+                  "crit_damage": 0.5,
+                  "damage_bonus": 0,
+                  "energy_regen": 0,
+                  "eidolon": 0,
+                  "major_traces": false,
+                  "rotation": [
+                    "basic"
+                  ],
+                  "ultimate_policy": "never",
+                  "equipment_instances": [],
+                  "required_mechanisms": []
+                },
+                {
+                  "character_id": "1221",
+                  "form_id": "1221:base",
+                  "level": 80,
+                  "atk": 1000,
+                  "speed": 100,
+                  "speed_precision": null,
+                  "crit_rate": 0,
+                  "crit_damage": 0.5,
+                  "damage_bonus": 0,
+                  "energy_regen": 0,
+                  "eidolon": 0,
+                  "major_traces": false,
+                  "rotation": [
+                    "basic"
+                  ],
+                  "ultimate_policy": "never",
+                  "equipment_instances": [],
+                  "required_mechanisms": []
+                },
+                {
+                  "character_id": "1109",
+                  "form_id": "1109:base",
+                  "level": 80,
+                  "atk": 1000,
+                  "speed": 100,
+                  "speed_precision": null,
+                  "crit_rate": 0,
+                  "crit_damage": 0.5,
+                  "damage_bonus": 0,
+                  "energy_regen": 0,
+                  "eidolon": 0,
+                  "major_traces": false,
+                  "rotation": [
+                    "basic"
+                  ],
+                  "ultimate_policy": "never",
+                  "equipment_instances": [],
+                  "required_mechanisms": []
+                }
+              ]
+            },
+            {
+              "id": "pool-0",
+              "label": "丹恒单体＋三人普攻资源位",
+              "investment_key": "assumed-panels-v1",
+              "origin": "hypothesis",
+              "members": [
+                {
+                  "character_id": "1002",
+                  "form_id": "1002:base",
+                  "level": 80,
+                  "atk": 2000,
+                  "speed": 100,
+                  "speed_precision": null,
+                  "crit_rate": 0.5,
+                  "crit_damage": 1,
+                  "damage_bonus": 0,
+                  "energy_regen": 0,
+                  "eidolon": 0,
+                  "major_traces": false,
+                  "rotation": [
+                    "basic"
+                  ],
+                  "ultimate_policy": "never",
+                  "equipment_instances": [],
+                  "required_mechanisms": []
+                },
+                {
+                  "character_id": "1001",
+                  "form_id": "1001:base",
+                  "level": 80,
+                  "atk": 1000,
+                  "speed": 100,
+                  "speed_precision": null,
+                  "crit_rate": 0,
+                  "crit_damage": 0.5,
+                  "damage_bonus": 0,
+                  "energy_regen": 0,
+                  "eidolon": 0,
+                  "major_traces": false,
+                  "rotation": [
+                    "basic"
+                  ],
+                  "ultimate_policy": "never",
+                  "equipment_instances": [],
+                  "required_mechanisms": []
+                },
+                {
+                  "character_id": "1105",
+                  "form_id": "1105:base",
+                  "level": 80,
+                  "atk": 1000,
+                  "speed": 100,
+                  "speed_precision": null,
+                  "crit_rate": 0,
+                  "crit_damage": 0.5,
+                  "damage_bonus": 0,
+                  "energy_regen": 0,
+                  "eidolon": 0,
+                  "major_traces": false,
+                  "rotation": [
+                    "basic"
+                  ],
+                  "ultimate_policy": "never",
+                  "equipment_instances": [],
+                  "required_mechanisms": []
+                },
+                {
+                  "character_id": "1104",
+                  "form_id": "1104:base",
+                  "level": 80,
+                  "atk": 1000,
+                  "speed": 100,
+                  "speed_precision": null,
+                  "crit_rate": 0,
+                  "crit_damage": 0.5,
+                  "damage_bonus": 0,
+                  "energy_regen": 0,
+                  "eidolon": 0,
+                  "major_traces": false,
+                  "rotation": [
+                    "basic"
+                  ],
+                  "ultimate_policy": "never",
+                  "equipment_instances": [],
+                  "required_mechanisms": []
+                }
+              ]
+            }
+          ],
+          "assumptions": [
+            "明确的工程假设面板与固定输出窗口；不代表成熟配队推荐，示范单体／对群选择",
+            "血线、弱点和击破窗口是共同外部条件，未做整场游戏内校准",
+            "只比较一个骑士目标配置；三骑士／王棋合法编成另由多队分配处理，不推断当期敌人特性"
+          ],
+          "source_refs": [
+            "https://srl.keqingmains.com/characters/ice/herta",
+            "https://srl.keqingmains.com/characters/wind/dan-heng",
+            "https://srl.keqingmains.com/combat-mechanics/damage/damage-formula",
+            "https://github.com/pzc2004/HSR_Nous/tree/f8935ddb407b297732fbd3c624d55897e3e648b9/data/library/characters"
+          ]
+        }
+      }
+    ],
+    "max_combinations": 256,
+    "max_seconds": 10
+  }
+}

@@ -1,0 +1,743 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "as_of": {
+      "type": "string",
+      "format": "date"
+    },
+    "budget": {
+      "type": "object",
+      "properties": {
+        "jade": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 10000000
+        },
+        "tickets": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100000
+        }
+      },
+      "required": [
+        "jade",
+        "tickets"
+      ],
+      "additionalProperties": false
+    },
+    "reserve_pulls": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 2000
+    },
+    "income": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "available_on": {
+            "type": "string",
+            "format": "date"
+          },
+          "source_ref": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          "conservative": {
+            "type": "object",
+            "properties": {
+              "jade": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 10000000
+              },
+              "tickets": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 100000
+              }
+            },
+            "required": [
+              "jade",
+              "tickets"
+            ],
+            "additionalProperties": false
+          },
+          "neutral": {
+            "type": "object",
+            "properties": {
+              "jade": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 10000000
+              },
+              "tickets": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 100000
+              }
+            },
+            "required": [
+              "jade",
+              "tickets"
+            ],
+            "additionalProperties": false
+          },
+          "optimistic": {
+            "type": "object",
+            "properties": {
+              "jade": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 10000000
+              },
+              "tickets": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 100000
+              }
+            },
+            "required": [
+              "jade",
+              "tickets"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "id",
+          "available_on",
+          "source_ref",
+          "conservative",
+          "neutral",
+          "optimistic"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 60,
+      "minItems": 0
+    },
+    "states": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "pool_type": {
+            "enum": [
+              "character",
+              "light_cone",
+              "synthetic"
+            ]
+          },
+          "pity": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 99
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "guaranteed": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "pool_type",
+          "pity",
+          "guaranteed"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 3,
+      "minItems": 1
+    },
+    "options": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "category": {
+            "enum": [
+              "new_character",
+              "light_cone",
+              "eidolon",
+              "team_completion"
+            ]
+          },
+          "stages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 100
+                },
+                "deadline": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "format": "date"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "schedule_status": {
+                  "enum": [
+                    "confirmed",
+                    "hypothetical",
+                    "unknown"
+                  ]
+                },
+                "rules": {
+                  "oneOf": [
+                    {
+                      "enum": [
+                        "hsr-character-assumed",
+                        "hsr-light-cone-assumed"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 100
+                        },
+                        "pool_type": {
+                          "enum": [
+                            "character",
+                            "light_cone",
+                            "synthetic"
+                          ]
+                        },
+                        "hard_pity": {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 100
+                        },
+                        "featured_rate": {
+                          "type": "number",
+                          "minimum": 1e-08,
+                          "maximum": 1
+                        },
+                        "hazards": {
+                          "type": "array",
+                          "items": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1
+                          },
+                          "maxItems": 100,
+                          "minItems": 1
+                        },
+                        "curve_kind": {
+                          "enum": [
+                            "synthetic",
+                            "explicit_assumption",
+                            "empirical_assumption"
+                          ]
+                        },
+                        "source_refs": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 2000
+                          },
+                          "maxItems": 10,
+                          "minItems": 1
+                        },
+                        "note": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 2000
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "pool_type",
+                        "hard_pity",
+                        "featured_rate",
+                        "hazards",
+                        "curve_kind",
+                        "source_refs",
+                        "note"
+                      ],
+                      "additionalProperties": false
+                    }
+                  ]
+                },
+                "copies": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 7
+                }
+              },
+              "required": [
+                "id",
+                "deadline",
+                "schedule_status",
+                "rules",
+                "copies"
+              ],
+              "additionalProperties": false
+            },
+            "maxItems": 5,
+            "minItems": 1
+          },
+          "benefit": {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "enum": [
+                  "qualitative",
+                  "fixed_state_damage"
+                ]
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              },
+              "baseline": {
+                "type": "object",
+                "properties": {
+                  "schema_version": {
+                    "const": 1
+                  },
+                  "kind": {
+                    "enum": [
+                      "damage",
+                      "timeline",
+                      "gacha",
+                      "pull_plan",
+                      "simulation"
+                    ]
+                  },
+                  "conditions": {
+                    "type": "object",
+                    "properties": {
+                      "game_version": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 40
+                      },
+                      "mode": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 100
+                      },
+                      "investment": {
+                        "enum": [
+                          "real_account",
+                          "equal_investment",
+                          "ideal_upper_bound",
+                          "synthetic"
+                        ]
+                      },
+                      "notes": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 2000
+                      },
+                      "snapshot_id": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 100
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      }
+                    },
+                    "required": [
+                      "game_version",
+                      "mode",
+                      "investment",
+                      "notes"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "versions": {
+                    "type": "object",
+                    "properties": {
+                      "engine": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 200,
+                        "description": "当前安装的执行版本，由 calculation_schema 返回"
+                      },
+                      "rules": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 200,
+                        "description": "当前受控计算规则版本，必须为 p3-1"
+                      },
+                      "knowledge": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 200
+                      },
+                      "data": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 200
+                      }
+                    },
+                    "required": [
+                      "engine",
+                      "rules",
+                      "knowledge",
+                      "data"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "budget": {
+                    "type": "object",
+                    "properties": {
+                      "max_events": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 300
+                      },
+                      "max_av": {
+                        "type": "number",
+                        "exclusiveMinimum": 0,
+                        "maximum": 100000
+                      },
+                      "max_transitions": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 3000000
+                      },
+                      "max_seconds": {
+                        "type": "number",
+                        "exclusiveMinimum": 0,
+                        "maximum": 30
+                      }
+                    },
+                    "required": [
+                      "max_events",
+                      "max_av",
+                      "max_transitions",
+                      "max_seconds"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "parameters": {
+                    "type": "object",
+                    "maxProperties": 40
+                  },
+                  "assumptions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 1500
+                    },
+                    "maxItems": 30,
+                    "minItems": 0
+                  },
+                  "source_refs": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 2000
+                    },
+                    "maxItems": 30,
+                    "minItems": 1
+                  },
+                  "run": {
+                    "type": "object",
+                    "properties": {
+                      "task_id": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 100
+                      },
+                      "started_at": {
+                        "type": "string",
+                        "format": "date-time"
+                      }
+                    },
+                    "required": [],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [
+                  "schema_version",
+                  "kind",
+                  "conditions",
+                  "versions",
+                  "budget",
+                  "parameters",
+                  "assumptions",
+                  "source_refs"
+                ],
+                "additionalProperties": false
+              },
+              "variant": {
+                "type": "object",
+                "properties": {
+                  "schema_version": {
+                    "const": 1
+                  },
+                  "kind": {
+                    "enum": [
+                      "damage",
+                      "timeline",
+                      "gacha",
+                      "pull_plan",
+                      "simulation"
+                    ]
+                  },
+                  "conditions": {
+                    "type": "object",
+                    "properties": {
+                      "game_version": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 40
+                      },
+                      "mode": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 100
+                      },
+                      "investment": {
+                        "enum": [
+                          "real_account",
+                          "equal_investment",
+                          "ideal_upper_bound",
+                          "synthetic"
+                        ]
+                      },
+                      "notes": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 2000
+                      },
+                      "snapshot_id": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 100
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      }
+                    },
+                    "required": [
+                      "game_version",
+                      "mode",
+                      "investment",
+                      "notes"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "versions": {
+                    "type": "object",
+                    "properties": {
+                      "engine": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 200,
+                        "description": "当前安装的执行版本，由 calculation_schema 返回"
+                      },
+                      "rules": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 200,
+                        "description": "当前受控计算规则版本，必须为 p3-1"
+                      },
+                      "knowledge": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 200
+                      },
+                      "data": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 200
+                      }
+                    },
+                    "required": [
+                      "engine",
+                      "rules",
+                      "knowledge",
+                      "data"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "budget": {
+                    "type": "object",
+                    "properties": {
+                      "max_events": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 300
+                      },
+                      "max_av": {
+                        "type": "number",
+                        "exclusiveMinimum": 0,
+                        "maximum": 100000
+                      },
+                      "max_transitions": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 3000000
+                      },
+                      "max_seconds": {
+                        "type": "number",
+                        "exclusiveMinimum": 0,
+                        "maximum": 30
+                      }
+                    },
+                    "required": [
+                      "max_events",
+                      "max_av",
+                      "max_transitions",
+                      "max_seconds"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "parameters": {
+                    "type": "object",
+                    "maxProperties": 40
+                  },
+                  "assumptions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 1500
+                    },
+                    "maxItems": 30,
+                    "minItems": 0
+                  },
+                  "source_refs": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 2000
+                    },
+                    "maxItems": 30,
+                    "minItems": 1
+                  },
+                  "run": {
+                    "type": "object",
+                    "properties": {
+                      "task_id": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 100
+                      },
+                      "started_at": {
+                        "type": "string",
+                        "format": "date-time"
+                      }
+                    },
+                    "required": [],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [
+                  "schema_version",
+                  "kind",
+                  "conditions",
+                  "versions",
+                  "budget",
+                  "parameters",
+                  "assumptions",
+                  "source_refs"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "kind",
+              "description"
+            ],
+            "additionalProperties": false
+          },
+          "reversal_conditions": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1500
+            },
+            "maxItems": 10,
+            "minItems": 1
+          }
+        },
+        "required": [
+          "id",
+          "category",
+          "stages",
+          "benefit",
+          "reversal_conditions"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 5,
+      "minItems": 1
+    },
+    "preferences": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 1000
+      },
+      "maxItems": 20,
+      "minItems": 0
+    }
+  },
+  "required": [
+    "as_of",
+    "budget",
+    "reserve_pulls",
+    "income",
+    "states",
+    "options",
+    "preferences"
+  ],
+  "additionalProperties": false
+}

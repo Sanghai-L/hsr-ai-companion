@@ -1,0 +1,55 @@
+{
+  "id": "danheng-dragon",
+  "category": "characters",
+  "title": "丹恒·腾荒：龙灵与强化行动",
+  "aliases": [
+    "龙灵",
+    "腾荒龙灵",
+    "1414"
+  ],
+  "version_min": "4.6",
+  "version_max": "4.6",
+  "information_state": "official_verified",
+  "evidence": "community",
+  "body_path": "characters/danheng-dragon.md",
+  "namespace": "release",
+  "entities": [],
+  "conditions": [
+    "仅核对锁定 4.6 来源文本；不证明游戏内完整结算"
+  ],
+  "exceptions": [
+    "丹恒·腾荒或同袍无法战斗时龙灵消失；完整时序尚未游戏内核验。"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "ref": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/dbe8cdfcfb0bf657b9fe1cf92d5537f118ccb487/index_new/cn/character_skills.json#/141403/desc",
+      "observed_at": "2026-11-08T03:35:24+00:00",
+      "license": "source rights reserved; facts paraphrased"
+    },
+    {
+      "type": "web",
+      "ref": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/dbe8cdfcfb0bf657b9fe1cf92d5537f118ccb487/index_new/cn/character_skills.json#/141404/desc",
+      "observed_at": "2026-11-08T03:35:24+00:00",
+      "license": "source rights reserved; facts paraphrased"
+    }
+  ],
+  "claims": [
+    {
+      "claim": "同袍存在时丹恒·腾荒召唤龙灵。龙灵行动可解负面效果并提供护盾；终结技使它在限定行动次数内发动追加攻击。",
+      "source_ref": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/dbe8cdfcfb0bf657b9fe1cf92d5537f118ccb487/index_new/cn/character_skills.json#/141403/desc",
+      "locator": "/141403/desc",
+      "source_sha256": "91e5e1b9f8456dceb4b0673f1d0362c6eeac2f0e50a0250d458cac08526262e0",
+      "verification": "source_text_checked; game-client interaction not verified"
+    },
+    {
+      "claim": "同袍存在时丹恒·腾荒召唤龙灵。龙灵行动可解负面效果并提供护盾；终结技使它在限定行动次数内发动追加攻击。",
+      "source_ref": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/dbe8cdfcfb0bf657b9fe1cf92d5537f118ccb487/index_new/cn/character_skills.json#/141404/desc",
+      "locator": "/141404/desc",
+      "source_sha256": "91e5e1b9f8456dceb4b0673f1d0362c6eeac2f0e50a0250d458cac08526262e0",
+      "verification": "source_text_checked; game-client interaction not verified"
+    }
+  ],
+  "verified_at": "2026-11-08T03:35:28+00:00",
+  "license": "Original factual summary; project distribution license undecided; game rights reserved"
+}

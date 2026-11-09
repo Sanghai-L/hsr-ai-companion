@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "backend": "hsr-nous",
+  "commit": "f8935ddb407b297732fbd3c624d55897e3e648b9",
+  "repository": "https://github.com/pzc2004/HSR_Nous",
+  "license": "MIT; see licenses/HSR_Nous-MIT.txt",
+  "patches": [
+    {
+      "path": "patches/hsr-nous/0001-bound-av-with-pending-waves.patch",
+      "sha256": "3878d5a46a1ca8b78d178295caad0444d3703f1d1c82cc95e373173d81d61919"
+    }
+  ],
+  "content_locks": [
+    {
+      "root": "repository",
+      "path": "src/hsr_nous/sim",
+      "kind": "tree",
+      "suffixes": [
+        ".py",
+        ".yaml",
+        ".json"
+      ],
+      "sha256": "bd68e90bb915c87ca89cb1522ccd09c561b91d1c09583fee7d4035ab56736afb"
+    },
+    {
+      "root": "repository",
+      "path": "src/hsr_nous/sim_schema",
+      "kind": "tree",
+      "suffixes": [
+        ".py",
+        ".yaml",
+        ".json"
+      ],
+      "sha256": "ac2a53b4e6a532088e1967f5a335ee4e3dc49923cf5461e8813489b0d5520009"
+    },
+    {
+      "root": "repository",
+      "path": "src/hsr_nous/common",
+      "kind": "tree",
+      "suffixes": [
+        ".py",
+        ".yaml",
+        ".json"
+      ],
+      "sha256": "f9deed59d48186403a1bac219d89eb6f01ba5c563566304eeebf0c21d36bc919"
+    },
+    {
+      "root": "repository",
+      "path": "data/library",
+      "kind": "tree",
+      "suffixes": [
+        ".py",
+        ".yaml",
+        ".json"
+      ],
+      "sha256": "506192d6acfb11f90f83f355bbfbfa99d08cadf672280f9fc6a260848b1ac875"
+    },
+    {
+      "root": "generated_templates",
+      "path": ".",
+      "kind": "tree",
+      "suffixes": [
+        ".yaml"
+      ],
+      "sha256": "58a22fdff98f7115bab8ae3063f9a00821ee00b153f825bd5f9b858fd6c8e78d"
+    },
+    {
+      "root": "repository",
+      "path": "LICENSE",
+      "kind": "file",
+      "sha256": "59ac1abbb60cf02550413644917488b757512adefcd9a2b5ade7242f900e12ff"
+    },
+    {
+      "root": "repository",
+      "path": "src/hsr_nous/__init__.py",
+      "kind": "file",
+      "sha256": "470403d3db533426a328deb053eff39998a76e214446c228574ccfedd57fad6c"
+    },
+    {
+      "root": "data",
+      "path": "turnbasedgamedata/MonsterConfig.json",
+      "kind": "file",
+      "sha256": "b7ddb5557a0f4d9ef0f39711523d337532d1b8c3ba83fc375946dcf2a586787c"
+    },
+    {
+      "root": "data",
+      "path": "turnbasedgamedata/MonsterTemplateConfig.json",
+      "kind": "file",
+      "sha256": "b79658284559a78ffe5d0166986c367e8ae12f4ea3b5bd78af0f12e6408a99ca"
+    },
+    {
+      "root": "data",
+      "path": "turnbasedgamedata/MonsterSkillConfig.json",
+      "kind": "file",
+      "sha256": "89689d2b70d6c142dff83e6b117eca8208bfe135a531f3db297cebb1cf298b3e"
+    },
+    {
+      "root": "data",
+      "path": "turnbasedgamedata/EliteGroup.json",
+      "kind": "file",
+      "sha256": "f1fdad33374e96f346d8798ac0bf6bdeda48e0075a8dda28145bb7f5d0d4ea27"
+    },
+    {
+      "root": "data",
+      "path": "turnbasedgamedata/HardLevelGroup.json",
+      "kind": "file",
+      "sha256": "ceeecd598cc16f37e1d35b93491426216c19327b8573ddd3bc61c2f8daadba3c"
+    }
+  ],
+  "core_dependencies": "tools/p0/simulator-requirements.lock",
+  "game_accuracy_certified": false,
+  "distribution": "local pinned runtime; no third-party game data in wheel"
+}

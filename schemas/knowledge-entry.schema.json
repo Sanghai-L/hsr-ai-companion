@@ -1,0 +1,214 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_-]{0,79}$"
+    },
+    "category": {
+      "enum": [
+        "combat",
+        "battle",
+        "characters",
+        "basics"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 8192
+    },
+    "aliases": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8192
+      },
+      "maxItems": 200
+    },
+    "version_min": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 8192
+    },
+    "version_max": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 8192
+    },
+    "information_state": {
+      "enum": [
+        "official_verified",
+        "official_disputed",
+        "beta",
+        "leak",
+        "stale",
+        "unknown"
+      ]
+    },
+    "evidence": {
+      "enum": [
+        "primary",
+        "reproduced",
+        "community",
+        "hypothesis",
+        "unknown"
+      ]
+    },
+    "body_path": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 8192
+    },
+    "conditions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8192
+      },
+      "maxItems": 200
+    },
+    "exceptions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8192
+      },
+      "maxItems": 200
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "enum": [
+              "manual",
+              "uid_public",
+              "derived",
+              "synthetic",
+              "maintainer",
+              "web"
+            ]
+          },
+          "ref": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 8192
+          },
+          "observed_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "license": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 8192
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "type",
+          "ref",
+          "observed_at"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "verified_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "license": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 8192
+    },
+    "namespace": {
+      "enum": [
+        "release",
+        "beta",
+        "leak"
+      ]
+    },
+    "entities": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 100
+      },
+      "maxItems": 20
+    },
+    "claims": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 100,
+      "items": {
+        "type": "object",
+        "properties": {
+          "claim": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 8192
+          },
+          "source_ref": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 8192
+          },
+          "locator": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 8192
+          },
+          "source_sha256": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 8192
+          },
+          "verification": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 8192
+          }
+        },
+        "required": [
+          "claim",
+          "source_ref",
+          "locator",
+          "source_sha256",
+          "verification"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "id",
+    "category",
+    "title",
+    "aliases",
+    "version_min",
+    "version_max",
+    "information_state",
+    "evidence",
+    "body_path",
+    "conditions",
+    "exceptions",
+    "sources",
+    "verified_at",
+    "license"
+  ],
+  "additionalProperties": false
+}

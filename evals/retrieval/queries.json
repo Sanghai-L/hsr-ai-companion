@@ -1,0 +1,392 @@
+{
+  "schema_version": 1,
+  "dataset_version": "p2-retrieval-1",
+  "annotated_at": "2026-11-08T03:38:39+00:00",
+  "annotation_method": "maintainer manual relevance labels, fixed before index/search implementation",
+  "queries": [
+    {
+      "id": "q01",
+      "query": "白厄火种怎么攒",
+      "relevant_ids": [
+        "phainon-fireseed"
+      ],
+      "split": "development",
+      "version": "4.6"
+    },
+    {
+      "id": "q02",
+      "query": "白恶启动",
+      "relevant_ids": [
+        "phainon-fireseed"
+      ],
+      "split": "development",
+      "version": "4.6"
+    },
+    {
+      "id": "q03",
+      "query": "变身队友能行动吗",
+      "relevant_ids": [
+        "phainon-transform"
+      ],
+      "split": "development",
+      "version": "4.6"
+    },
+    {
+      "id": "q04",
+      "query": "刻律德拉奇袭",
+      "relevant_ids": [
+        "cerydra-charge"
+      ],
+      "split": "development",
+      "version": "4.6"
+    },
+    {
+      "id": "q05",
+      "query": "周日拉条召唤物",
+      "relevant_ids": [
+        "sunday-advance"
+      ],
+      "split": "development",
+      "version": "4.6"
+    },
+    {
+      "id": "q06",
+      "query": "星期日大招回能",
+      "relevant_ids": [
+        "sunday-energy"
+      ],
+      "split": "development",
+      "version": "4.6"
+    },
+    {
+      "id": "q07",
+      "query": "腾荒盾按什么属性",
+      "relevant_ids": [
+        "danheng-shield"
+      ],
+      "split": "development",
+      "version": "4.6"
+    },
+    {
+      "id": "q08",
+      "query": "龙灵什么时候消失",
+      "relevant_ids": [
+        "danheng-dragon"
+      ],
+      "split": "development",
+      "version": "4.6"
+    },
+    {
+      "id": "q09",
+      "query": "黄泉残梦",
+      "relevant_ids": [
+        "acheron-stacks"
+      ],
+      "split": "development",
+      "version": "4.6"
+    },
+    {
+      "id": "q10",
+      "query": "黄泉大招无视弱点吗",
+      "relevant_ids": [
+        "acheron-ultimate",
+        "ignore-weakness"
+      ],
+      "split": "development",
+      "version": "4.6"
+    },
+    {
+      "id": "q11",
+      "query": "银狼弱点植入",
+      "relevant_ids": [
+        "silverwolf-implant"
+      ],
+      "split": "development",
+      "version": "4.6"
+    },
+    {
+      "id": "q12",
+      "query": "佩拉能解增益吗",
+      "relevant_ids": [
+        "pela-dispel"
+      ],
+      "split": "development",
+      "version": "4.6"
+    },
+    {
+      "id": "q13",
+      "query": "沙金追击",
+      "relevant_ids": [
+        "aventurine-followup",
+        "followup-hits"
+      ],
+      "split": "development",
+      "version": "4.6"
+    },
+    {
+      "id": "q14",
+      "query": "三月七存护冰盾",
+      "relevant_ids": [
+        "march-preservation"
+      ],
+      "split": "development",
+      "version": "4.6"
+    },
+    {
+      "id": "q15",
+      "query": "巡猎三月师父",
+      "relevant_ids": [
+        "march-hunt"
+      ],
+      "split": "development",
+      "version": "4.6"
+    },
+    {
+      "id": "q16",
+      "query": "同名形态怎么区分",
+      "relevant_ids": [
+        "forms"
+      ],
+      "split": "development",
+      "version": "4.6"
+    },
+    {
+      "id": "q17",
+      "query": "命途决定机制吗",
+      "relevant_ids": [
+        "paths"
+      ],
+      "split": "development",
+      "version": "4.6"
+    },
+    {
+      "id": "q18",
+      "query": "角色属性与弱点",
+      "relevant_ids": [
+        "elements"
+      ],
+      "split": "development",
+      "version": "4.6"
+    },
+    {
+      "id": "q19",
+      "query": "UID不展示就是未持有吗",
+      "relevant_ids": [
+        "showcase"
+      ],
+      "split": "development",
+      "version": "4.6"
+    },
+    {
+      "id": "q20",
+      "query": "技能倍率要看等级吗",
+      "relevant_ids": [
+        "skill-level"
+      ],
+      "split": "development",
+      "version": "4.6"
+    },
+    {
+      "id": "q21",
+      "query": "秘技点与战技点",
+      "relevant_ids": [
+        "technique"
+      ],
+      "split": "development",
+      "version": "4.6"
+    },
+    {
+      "id": "q22",
+      "query": "砂金普攻是攻击倍率吗",
+      "relevant_ids": [
+        "damage-scaling"
+      ],
+      "split": "development",
+      "version": "4.6"
+    },
+    {
+      "id": "q23",
+      "query": "白厄反击算战技伤害",
+      "relevant_ids": [
+        "damage-tag"
+      ],
+      "split": "development",
+      "version": "4.6"
+    },
+    {
+      "id": "q24",
+      "query": "队友不造成伤害能给火种吗",
+      "relevant_ids": [
+        "skill-target"
+      ],
+      "split": "development",
+      "version": "4.6"
+    },
+    {
+      "id": "q25",
+      "query": "立即行动等于提高速度吗",
+      "relevant_ids": [
+        "action-advance"
+      ],
+      "split": "development",
+      "version": "4.6"
+    },
+    {
+      "id": "q26",
+      "query": "叠盾有上限吗",
+      "relevant_ids": [
+        "shield-cap"
+      ],
+      "split": "development",
+      "version": "4.6"
+    },
+    {
+      "id": "q27",
+      "query": "黄泉多段每段都加残梦吗",
+      "relevant_ids": [
+        "debuff-once"
+      ],
+      "split": "development",
+      "version": "4.6"
+    },
+    {
+      "id": "q28",
+      "query": "银狼原有弱点减抗",
+      "relevant_ids": [
+        "weakness-resistance"
+      ],
+      "split": "development",
+      "version": "4.6"
+    },
+    {
+      "id": "q29",
+      "query": "基础概率与固定概率",
+      "relevant_ids": [
+        "probability-label"
+      ],
+      "split": "development",
+      "version": "4.6"
+    },
+    {
+      "id": "q30",
+      "query": "白厄额外回合",
+      "relevant_ids": [
+        "extra-turn"
+      ],
+      "split": "development",
+      "version": "4.6"
+    },
+    {
+      "id": "q31",
+      "query": "蒙福者按谁的回合减少",
+      "relevant_ids": [
+        "buff-clock"
+      ],
+      "split": "validation",
+      "version": "4.6"
+    },
+    {
+      "id": "q32",
+      "query": "砂金七段是七次追加吗",
+      "relevant_ids": [
+        "followup-hits"
+      ],
+      "split": "validation",
+      "version": "4.6"
+    },
+    {
+      "id": "q33",
+      "query": "三月七不是巡猎是冰盾",
+      "relevant_ids": [
+        "march-preservation"
+      ],
+      "split": "validation",
+      "version": "4.6"
+    },
+    {
+      "id": "q34",
+      "query": "白厄火种不需要敌人受伤",
+      "relevant_ids": [
+        "skill-target",
+        "phainon-fireseed"
+      ],
+      "split": "validation",
+      "version": "4.6"
+    },
+    {
+      "id": "q35",
+      "query": "星期日对同谐可以拉条吗",
+      "relevant_ids": [
+        "sunday-advance",
+        "action-advance"
+      ],
+      "split": "validation",
+      "version": "4.6"
+    },
+    {
+      "id": "q36",
+      "query": "丹恒腾荒龙灵强化",
+      "relevant_ids": [
+        "danheng-dragon"
+      ],
+      "split": "validation",
+      "version": "4.6"
+    },
+    {
+      "id": "q37",
+      "query": "黄泉叠层一次技能限制",
+      "relevant_ids": [
+        "debuff-once",
+        "acheron-stacks"
+      ],
+      "split": "validation",
+      "version": "4.6"
+    },
+    {
+      "id": "q38",
+      "query": "军功换目标充能",
+      "relevant_ids": [
+        "cerydra-charge"
+      ],
+      "split": "validation",
+      "version": "4.6"
+    },
+    {
+      "id": "q39",
+      "query": "剑三月强化普攻不恢复战技点",
+      "relevant_ids": [
+        "march-hunt"
+      ],
+      "split": "validation",
+      "version": "4.6"
+    },
+    {
+      "id": "q40",
+      "query": "未公开的装备能认为没有吗",
+      "relevant_ids": [
+        "showcase"
+      ],
+      "split": "validation",
+      "version": "4.6"
+    },
+    {
+      "id": "q41",
+      "query": "拉条不是加速",
+      "relevant_ids": [
+        "action-advance"
+      ],
+      "split": "validation",
+      "version": "4.6"
+    },
+    {
+      "id": "q42",
+      "query": "沙金防御力影响护盾",
+      "relevant_ids": [
+        "aventurine-followup",
+        "shield-cap"
+      ],
+      "split": "validation",
+      "version": "4.6"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_-]{0,79}$"
+    },
+    "kind": {
+      "const": "program"
+    },
+    "target_version": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 8192
+    },
+    "package_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "scope": {
+      "const": "program-and-executable-rules"
+    },
+    "scope_path": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 8192
+    },
+    "migrations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8192
+      },
+      "maxItems": 200
+    },
+    "state": {
+      "enum": [
+        "proposed",
+        "confirmed",
+        "consumed",
+        "invalidated"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "id",
+    "kind",
+    "target_version",
+    "package_sha256",
+    "scope",
+    "scope_path",
+    "migrations",
+    "state",
+    "created_at"
+  ],
+  "additionalProperties": false
+}

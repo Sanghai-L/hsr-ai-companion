@@ -1,0 +1,5 @@
+# Only simulation, test and editable-build dependencies; no account/LLM/web.
+PyYAML>=6.0.3
+pytest>=8
+hatchling
+editables

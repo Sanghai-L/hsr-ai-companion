@@ -1,0 +1,349 @@
+{
+  "schema_version": 1,
+  "method": "representative-1",
+  "data_version": "released-kit-f8935ddb-p5-1",
+  "supported_game_versions": [
+    "4.6"
+  ],
+  "upstream_commit": "f8935ddb407b297732fbd3c624d55897e3e648b9",
+  "scope": "E0, basic6 and skill/ultimate/talent10, no major traces; final supplied panels; no equipment effects",
+  "characters": {
+    "1002:base": {
+      "name": "丹恒",
+      "element": "wind",
+      "energy_cap": 100,
+      "actions": {
+        "basic": {
+          "multiplier": 1,
+          "target": "single",
+          "sp_cost": 0,
+          "sp_gain": 1,
+          "energy_gain": 20,
+          "energy_cost": 0,
+          "toughness": 30
+        },
+        "skill": {
+          "multiplier": 2.6,
+          "target": "single",
+          "sp_cost": 1,
+          "sp_gain": 0,
+          "energy_gain": 30,
+          "energy_cost": 0,
+          "toughness": 60
+        },
+        "ultimate": {
+          "multiplier": 4,
+          "target": "single",
+          "sp_cost": 0,
+          "sp_gain": 0,
+          "energy_gain": 5,
+          "energy_cost": 100,
+          "toughness": 90
+        }
+      },
+      "supported_mechanisms": [
+        "ordinary_direct",
+        "fixed_speed",
+        "basic_sp_energy",
+        "skill_direct",
+        "ultimate_slowed_multiplier"
+      ],
+      "source_ref": "https://github.com/pzc2004/HSR_Nous/blob/f8935ddb407b297732fbd3c624d55897e3e648b9/data/library/characters/1002_丹恒.yaml",
+      "source_sha256": "3d18940c1e2c61412aab849915b3a0d29d9fee2a1578b80a0db1ce7b3039fe13",
+      "scope": "basic-only when no incoming attacks, burns, ally-target abilities or unmodelled passive triggers; not full kit coverage"
+    },
+    "1013:base": {
+      "name": "黑塔",
+      "element": "ice",
+      "energy_cap": 110,
+      "actions": {
+        "basic": {
+          "multiplier": 1,
+          "target": "single",
+          "sp_cost": 0,
+          "sp_gain": 1,
+          "energy_gain": 20,
+          "energy_cost": 0,
+          "toughness": 30
+        },
+        "skill": {
+          "multiplier": 1,
+          "target": "all",
+          "sp_cost": 1,
+          "sp_gain": 0,
+          "energy_gain": 30,
+          "energy_cost": 0,
+          "toughness": 30
+        },
+        "ultimate": {
+          "multiplier": 2,
+          "target": "all",
+          "sp_cost": 0,
+          "sp_gain": 0,
+          "energy_gain": 5,
+          "energy_cost": 110,
+          "toughness": 60
+        },
+        "follow_up": {
+          "multiplier": 0.4,
+          "target": "all",
+          "sp_cost": 0,
+          "sp_gain": 0,
+          "energy_gain": 5,
+          "energy_cost": 0,
+          "toughness": 15
+        }
+      },
+      "supported_mechanisms": [
+        "ordinary_direct",
+        "fixed_speed",
+        "basic_sp_energy",
+        "skill_high_hp_bonus",
+        "explicit_threshold_followup"
+      ],
+      "source_ref": "https://github.com/pzc2004/HSR_Nous/blob/f8935ddb407b297732fbd3c624d55897e3e648b9/data/library/characters/1013_黑塔.yaml",
+      "source_sha256": "6d08d5a065114f51cda9290248c4ebb7cbc462e31efb408a1685e984d40c595b",
+      "scope": "basic-only when no incoming attacks, burns, ally-target abilities or unmodelled passive triggers; not full kit coverage"
+    },
+    "1001:base": {
+      "name": "三月七",
+      "element": "ice",
+      "energy_cap": 120,
+      "actions": {
+        "basic": {
+          "multiplier": 1,
+          "target": "single",
+          "sp_cost": 0,
+          "sp_gain": 1,
+          "energy_gain": 20,
+          "energy_cost": 0,
+          "toughness": 30
+        }
+      },
+      "supported_mechanisms": [
+        "ordinary_direct",
+        "fixed_speed",
+        "basic_sp_energy"
+      ],
+      "source_ref": "https://github.com/pzc2004/HSR_Nous/blob/f8935ddb407b297732fbd3c624d55897e3e648b9/data/library/characters/1001_三月七.yaml",
+      "source_sha256": "037cab79eb6c8753bdbad5f37b1399419cac18fd0be84dcf52ad2e7ebe534891",
+      "scope": "basic-only when no incoming attacks, burns, ally-target abilities or unmodelled passive triggers; not full kit coverage"
+    },
+    "1105:base": {
+      "name": "娜塔莎",
+      "element": "physical",
+      "energy_cap": 90,
+      "actions": {
+        "basic": {
+          "multiplier": 1,
+          "target": "single",
+          "sp_cost": 0,
+          "sp_gain": 1,
+          "energy_gain": 20,
+          "energy_cost": 0,
+          "toughness": 30
+        }
+      },
+      "supported_mechanisms": [
+        "ordinary_direct",
+        "fixed_speed",
+        "basic_sp_energy"
+      ],
+      "source_ref": "https://github.com/pzc2004/HSR_Nous/blob/f8935ddb407b297732fbd3c624d55897e3e648b9/data/library/characters/1105_娜塔莎.yaml",
+      "source_sha256": "06c0807f2b5cb33a60910252b3a68bc20e87c90fb82e57eafd7049964f6bed2c",
+      "scope": "basic-only when no incoming attacks, burns, ally-target abilities or unmodelled passive triggers; not full kit coverage"
+    },
+    "1104:base": {
+      "name": "杰帕德",
+      "element": "ice",
+      "energy_cap": 100,
+      "actions": {
+        "basic": {
+          "multiplier": 1,
+          "target": "single",
+          "sp_cost": 0,
+          "sp_gain": 1,
+          "energy_gain": 20,
+          "energy_cost": 0,
+          "toughness": 30
+        }
+      },
+      "supported_mechanisms": [
+        "ordinary_direct",
+        "fixed_speed",
+        "basic_sp_energy"
+      ],
+      "source_ref": "https://github.com/pzc2004/HSR_Nous/blob/f8935ddb407b297732fbd3c624d55897e3e648b9/data/library/characters/1104_杰帕德.yaml",
+      "source_sha256": "c03a8e7fbf9c74393b5b9ef5f0ff691b330e34808321b5aefa71af9279e36614",
+      "scope": "basic-only when no incoming attacks, burns, ally-target abilities or unmodelled passive triggers; not full kit coverage"
+    },
+    "1211:base": {
+      "name": "白露",
+      "element": "lightning",
+      "energy_cap": 100,
+      "actions": {
+        "basic": {
+          "multiplier": 1,
+          "target": "single",
+          "sp_cost": 0,
+          "sp_gain": 1,
+          "energy_gain": 20,
+          "energy_cost": 0,
+          "toughness": 30
+        }
+      },
+      "supported_mechanisms": [
+        "ordinary_direct",
+        "fixed_speed",
+        "basic_sp_energy"
+      ],
+      "source_ref": "https://github.com/pzc2004/HSR_Nous/blob/f8935ddb407b297732fbd3c624d55897e3e648b9/data/library/characters/1211_白露.yaml",
+      "source_sha256": "0cb73cc531b5b89cecaf020ada37c56625cdc023d32fee6d9345a76c81f44a99",
+      "scope": "basic-only when no incoming attacks, burns, ally-target abilities or unmodelled passive triggers; not full kit coverage"
+    },
+    "1203:base": {
+      "name": "罗刹",
+      "element": "imaginary",
+      "energy_cap": 100,
+      "actions": {
+        "basic": {
+          "multiplier": 1,
+          "target": "single",
+          "sp_cost": 0,
+          "sp_gain": 1,
+          "energy_gain": 20,
+          "energy_cost": 0,
+          "toughness": 30
+        }
+      },
+      "supported_mechanisms": [
+        "ordinary_direct",
+        "fixed_speed",
+        "basic_sp_energy"
+      ],
+      "source_ref": "https://github.com/pzc2004/HSR_Nous/blob/f8935ddb407b297732fbd3c624d55897e3e648b9/data/library/characters/1203_罗刹.yaml",
+      "source_sha256": "55705dd0e85ac2a5df3572419b68a17bc273da49866bd91d97309e4a208adc82",
+      "scope": "basic-only when no incoming attacks, burns, ally-target abilities or unmodelled passive triggers; not full kit coverage"
+    },
+    "1301:base": {
+      "name": "加拉赫",
+      "element": "fire",
+      "energy_cap": 110,
+      "actions": {
+        "basic": {
+          "multiplier": 1,
+          "target": "single",
+          "sp_cost": 0,
+          "sp_gain": 1,
+          "energy_gain": 20,
+          "energy_cost": 0,
+          "toughness": 30
+        }
+      },
+      "supported_mechanisms": [
+        "ordinary_direct",
+        "fixed_speed",
+        "basic_sp_energy"
+      ],
+      "source_ref": "https://github.com/pzc2004/HSR_Nous/blob/f8935ddb407b297732fbd3c624d55897e3e648b9/data/library/characters/1301_加拉赫.yaml",
+      "source_sha256": "b86a92814ccfe2c5257fb7e11e1ccb2f82d5a406f3ced4275fd2806fa65840d5",
+      "scope": "basic-only when no incoming attacks, burns, ally-target abilities or unmodelled passive triggers; not full kit coverage"
+    },
+    "1312:base": {
+      "name": "米沙",
+      "element": "ice",
+      "energy_cap": 100,
+      "actions": {
+        "basic": {
+          "multiplier": 1,
+          "target": "single",
+          "sp_cost": 0,
+          "sp_gain": 1,
+          "energy_gain": 20,
+          "energy_cost": 0,
+          "toughness": 30
+        }
+      },
+      "supported_mechanisms": [
+        "ordinary_direct",
+        "fixed_speed",
+        "basic_sp_energy"
+      ],
+      "source_ref": "https://github.com/pzc2004/HSR_Nous/blob/f8935ddb407b297732fbd3c624d55897e3e648b9/data/library/characters/1312_米沙.yaml",
+      "source_sha256": "a2e2eee3d027669e2ac1d365386453472f4a4c24ea8fbccf9d3d75855c642eab",
+      "scope": "basic-only when no incoming attacks, burns, ally-target abilities or unmodelled passive triggers; not full kit coverage"
+    },
+    "1107:base": {
+      "name": "克拉拉",
+      "element": "physical",
+      "energy_cap": 110,
+      "actions": {
+        "basic": {
+          "multiplier": 1,
+          "target": "single",
+          "sp_cost": 0,
+          "sp_gain": 1,
+          "energy_gain": 20,
+          "energy_cost": 0,
+          "toughness": 30
+        }
+      },
+      "supported_mechanisms": [
+        "ordinary_direct",
+        "fixed_speed",
+        "basic_sp_energy"
+      ],
+      "source_ref": "https://github.com/pzc2004/HSR_Nous/blob/f8935ddb407b297732fbd3c624d55897e3e648b9/data/library/characters/1107_克拉拉.yaml",
+      "source_sha256": "5bd0eca17c004aba641402df3253b304197b64cfca24f1ec6de10061781d7bf4",
+      "scope": "basic-only when no incoming attacks, burns, ally-target abilities or unmodelled passive triggers; not full kit coverage"
+    },
+    "1221:base": {
+      "name": "云璃",
+      "element": "physical",
+      "energy_cap": 120,
+      "actions": {
+        "basic": {
+          "multiplier": 1,
+          "target": "single",
+          "sp_cost": 0,
+          "sp_gain": 1,
+          "energy_gain": 20,
+          "energy_cost": 0,
+          "toughness": 30
+        }
+      },
+      "supported_mechanisms": [
+        "ordinary_direct",
+        "fixed_speed",
+        "basic_sp_energy"
+      ],
+      "source_ref": "https://github.com/pzc2004/HSR_Nous/blob/f8935ddb407b297732fbd3c624d55897e3e648b9/data/library/characters/1221_云璃.yaml",
+      "source_sha256": "b8361a9cca9cfd21f01c211f11ca425b26731fe37b714197f5c983df8883323d",
+      "scope": "basic-only when no incoming attacks, burns, ally-target abilities or unmodelled passive triggers; not full kit coverage"
+    },
+    "1109:base": {
+      "name": "虎克",
+      "element": "fire",
+      "energy_cap": 120,
+      "actions": {
+        "basic": {
+          "multiplier": 1,
+          "target": "single",
+          "sp_cost": 0,
+          "sp_gain": 1,
+          "energy_gain": 20,
+          "energy_cost": 0,
+          "toughness": 30
+        }
+      },
+      "supported_mechanisms": [
+        "ordinary_direct",
+        "fixed_speed",
+        "basic_sp_energy"
+      ],
+      "source_ref": "https://github.com/pzc2004/HSR_Nous/blob/f8935ddb407b297732fbd3c624d55897e3e648b9/data/library/characters/1109_虎克.yaml",
+      "source_sha256": "e6af396909ca0bf10af0bb876c461fa0e981d2ddc6c6d53c52a80b3d617f5eaf",
+      "scope": "basic-only when no incoming attacks, burns, ally-target abilities or unmodelled passive triggers; not full kit coverage"
+    }
+  }
+}

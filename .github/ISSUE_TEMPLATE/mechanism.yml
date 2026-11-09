@@ -1,0 +1,27 @@
+name: 机制资料或修正
+description: 附来源、版本与复现条件
+body:
+  - type: textarea
+    id: claim
+    attributes:
+      label: 论点、游戏版本和适用条件
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: 原始来源、正文日期、支持及反对证据、转载依赖
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 可复核输入、预期结果及仍缺资料
+    validations:
+      required: true
+  - type: textarea
+    id: license
+    attributes:
+      label: 作者、许可与允许分发的范围
+    validations:
+      required: true

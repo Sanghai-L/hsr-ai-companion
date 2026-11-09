@@ -1,0 +1,25 @@
+{
+  "id": "test-form",
+  "category": "characters",
+  "title": "合成形态样例",
+  "aliases": [],
+  "version_min": "synthetic",
+  "version_max": "synthetic",
+  "information_state": "unknown",
+  "evidence": "hypothesis",
+  "body_path": "characters/test-form.md",
+  "conditions": [
+    "仅用于工程验证"
+  ],
+  "exceptions": [],
+  "sources": [
+    {
+      "type": "synthetic",
+      "ref": "project-original-fixture",
+      "observed_at": "2026-11-06T00:00:00Z",
+      "license": "original-test-fixture"
+    }
+  ],
+  "verified_at": "2026-11-06T00:00:00Z",
+  "license": "original-test-fixture"
+}

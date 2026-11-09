@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "kqm-damage",
+      "url": "https://srl.keqingmains.com/combat-mechanics/damage/damage-formula",
+      "observed_at": "2026-11-08T04:43:50+00:00",
+      "http_status": 200,
+      "sha256": "e53b8753331bfcfe83626acbedd019cf38a09f37f30665c721ac80e5dc845330",
+      "bytes": 62170,
+      "scope": "community original theorycraft; page under construction; not official game specification",
+      "capture": "raw public response, previously captured this task",
+      "private_capture": ".local/evidence/D030/sources/kqm-damage.html"
+    },
+    {
+      "id": "kqm-speed",
+      "url": "https://hsr.keqingmains.com/misc/speed-guide/",
+      "observed_at": "2026-11-08T04:43:50+00:00",
+      "http_status": 200,
+      "sha256": "00a21d043cec2b5c5746e0adff8a2060963582eabbec239d98512ba012a74009",
+      "bytes": 89630,
+      "scope": "community original theorycraft",
+      "capture": "raw public response, previously captured this task",
+      "private_capture": ".local/evidence/D030/sources/kqm-speed.html"
+    },
+    {
+      "id": "kqm-speed-proof",
+      "url": "https://hsr.keqingmains.com/wp-content/uploads/2024/01/KQM_Bronya_Guide_SPD_Formula_Proofs.pdf",
+      "observed_at": "2026-11-08T04:43:50+00:00",
+      "http_status": 200,
+      "sha256": "6f16d903436524f11625c671845e5bb0131cb4eec09ddf44663445a5408d78eb",
+      "bytes": 163573,
+      "scope": "community authored mathematical proof; first-page gauge relation",
+      "capture": "raw public response, previously captured this task",
+      "private_capture": ".local/evidence/D030/sources/kqm-speed-proof.pdf"
+    },
+    {
+      "id": "official-warp-hard-rules",
+      "url": "https://support.hoyoverse.com/hc/en-us/articles/50913710696217-How-does-the-pity-system-work-for-different-banners-and-reruns",
+      "observed_at": "2026-11-08T04:43:50+00:00",
+      "http_status": 403,
+      "sha256": "23b3c88dc00151d4b7e909273f88aab1d53e3a0c539954cec82b77ac40694bbc",
+      "bytes": 757,
+      "scope": "official help updated 2025-09-23; actual banner details take precedence",
+      "capture": "direct request blocked; actual web-tool page read, normalized factual extract hash only",
+      "private_capture": ".local/evidence/D030/web-reviewed/official-warp-hard-rules.json"
+    },
+    {
+      "id": "official-light-cone-guarantee",
+      "url": "https://support.hoyoverse.com/hc/en-us/articles/50913708153625-How-does-the-guarantee-system-work-for-the-Light-Cone-Event-Warp-and-does-my-pity-carry-over",
+      "observed_at": "2026-11-08T04:43:51+00:00",
+      "http_status": 403,
+      "sha256": "f60f66a885d293fae1b8d3c0c073a49fe06c840eb09d9bd06f6861a5e3445c05",
+      "bytes": 647,
+      "scope": "official help updated 2025-09-23; independent banner categories",
+      "capture": "direct request blocked; actual web-tool page read, normalized factual extract hash only",
+      "private_capture": ".local/evidence/D030/web-reviewed/official-light-cone-guarantee.json"
+    },
+    {
+      "id": "empirical-soft-pity-model",
+      "url": "https://gachaguide.com/honkai_star_rail_probabilities_deep_dive",
+      "observed_at": "2026-11-08T04:43:58+00:00",
+      "http_status": 200,
+      "sha256": "a47d9044e11298ad36a963a8ba351e34e57128888d806ae634b98ef6ecc58f6d",
+      "bytes": 63581,
+      "scope": "author-inferred curve, not official exact; light-cone onset disputed; featured-share theory not adopted",
+      "capture": "raw public response",
+      "private_capture": ".local/evidence/D030/sources/empirical-soft-pity-model.html"
+    },
+    {
+      "id": "nous-rulebook-crosscheck",
+      "url": "https://github.com/pzc2004/HSR_Nous/blob/f8935ddb407b297732fbd3c624d55897e3e648b9/src/hsr_nous/sim_schema/rulebook.yaml",
+      "observed_at": "2026-11-08T04:43:58+00:00",
+      "sha256": "d37c1b0a9dbe3819cd210e02bef96db9598486ab9b8554bad90602ca136277fe",
+      "scope": "locked backend expression agreement for ordinary direct zones, not independent game accuracy"
+    }
+  ],
+  "policy": "original summaries only; executable formulas shipped with program; knowledge sync cannot replace code"
+}

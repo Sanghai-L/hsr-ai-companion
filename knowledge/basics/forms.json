@@ -1,0 +1,95 @@
+{
+  "id": "forms",
+  "category": "basics",
+  "title": "同名角色的形态与实体 ID",
+  "aliases": [
+    "同名形态",
+    "角色形态",
+    "丹恒",
+    "三月七形态"
+  ],
+  "version_min": "4.6",
+  "version_max": "4.6",
+  "information_state": "official_verified",
+  "evidence": "community",
+  "body_path": "basics/forms.md",
+  "namespace": "release",
+  "entities": [],
+  "conditions": [
+    "仅核对锁定 4.6 来源文本；不证明游戏内完整结算"
+  ],
+  "exceptions": [
+    "拥有一个形态不能自动推断另一形态的练度与装备。"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "ref": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/dbe8cdfcfb0bf657b9fe1cf92d5537f118ccb487/index_new/cn/characters.json#/1001",
+      "observed_at": "2026-11-08T03:35:25+00:00",
+      "license": "source rights reserved; facts paraphrased"
+    },
+    {
+      "type": "web",
+      "ref": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/dbe8cdfcfb0bf657b9fe1cf92d5537f118ccb487/index_new/cn/characters.json#/1224",
+      "observed_at": "2026-11-08T03:35:25+00:00",
+      "license": "source rights reserved; facts paraphrased"
+    },
+    {
+      "type": "web",
+      "ref": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/dbe8cdfcfb0bf657b9fe1cf92d5537f118ccb487/index_new/cn/characters.json#/1002",
+      "observed_at": "2026-11-08T03:35:25+00:00",
+      "license": "source rights reserved; facts paraphrased"
+    },
+    {
+      "type": "web",
+      "ref": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/dbe8cdfcfb0bf657b9fe1cf92d5537f118ccb487/index_new/cn/characters.json#/1213",
+      "observed_at": "2026-11-08T03:35:25+00:00",
+      "license": "source rights reserved; facts paraphrased"
+    },
+    {
+      "type": "web",
+      "ref": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/dbe8cdfcfb0bf657b9fe1cf92d5537f118ccb487/index_new/cn/characters.json#/1414",
+      "observed_at": "2026-11-08T03:35:25+00:00",
+      "license": "source rights reserved; facts paraphrased"
+    }
+  ],
+  "claims": [
+    {
+      "claim": "同名或同一人物的不同战斗形态使用不同实体 ID，例如三月七存护与巡猎、丹恒与饮月及腾荒。读取账号、技能和研究时应保留形态标识。",
+      "source_ref": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/dbe8cdfcfb0bf657b9fe1cf92d5537f118ccb487/index_new/cn/characters.json#/1001",
+      "locator": "/1001",
+      "source_sha256": "084a5cdb420d071bb41f057f218b141ff1930fe7293a4d5d48a967cdf29e27bc",
+      "verification": "source_text_checked; game-client interaction not verified"
+    },
+    {
+      "claim": "同名或同一人物的不同战斗形态使用不同实体 ID，例如三月七存护与巡猎、丹恒与饮月及腾荒。读取账号、技能和研究时应保留形态标识。",
+      "source_ref": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/dbe8cdfcfb0bf657b9fe1cf92d5537f118ccb487/index_new/cn/characters.json#/1224",
+      "locator": "/1224",
+      "source_sha256": "084a5cdb420d071bb41f057f218b141ff1930fe7293a4d5d48a967cdf29e27bc",
+      "verification": "source_text_checked; game-client interaction not verified"
+    },
+    {
+      "claim": "同名或同一人物的不同战斗形态使用不同实体 ID，例如三月七存护与巡猎、丹恒与饮月及腾荒。读取账号、技能和研究时应保留形态标识。",
+      "source_ref": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/dbe8cdfcfb0bf657b9fe1cf92d5537f118ccb487/index_new/cn/characters.json#/1002",
+      "locator": "/1002",
+      "source_sha256": "084a5cdb420d071bb41f057f218b141ff1930fe7293a4d5d48a967cdf29e27bc",
+      "verification": "source_text_checked; game-client interaction not verified"
+    },
+    {
+      "claim": "同名或同一人物的不同战斗形态使用不同实体 ID，例如三月七存护与巡猎、丹恒与饮月及腾荒。读取账号、技能和研究时应保留形态标识。",
+      "source_ref": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/dbe8cdfcfb0bf657b9fe1cf92d5537f118ccb487/index_new/cn/characters.json#/1213",
+      "locator": "/1213",
+      "source_sha256": "084a5cdb420d071bb41f057f218b141ff1930fe7293a4d5d48a967cdf29e27bc",
+      "verification": "source_text_checked; game-client interaction not verified"
+    },
+    {
+      "claim": "同名或同一人物的不同战斗形态使用不同实体 ID，例如三月七存护与巡猎、丹恒与饮月及腾荒。读取账号、技能和研究时应保留形态标识。",
+      "source_ref": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/dbe8cdfcfb0bf657b9fe1cf92d5537f118ccb487/index_new/cn/characters.json#/1414",
+      "locator": "/1414",
+      "source_sha256": "084a5cdb420d071bb41f057f218b141ff1930fe7293a4d5d48a967cdf29e27bc",
+      "verification": "source_text_checked; game-client interaction not verified"
+    }
+  ],
+  "verified_at": "2026-11-08T03:35:28+00:00",
+  "license": "Original factual summary; project distribution license undecided; game rights reserved"
+}

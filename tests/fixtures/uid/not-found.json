@@ -1,0 +1,9 @@
+{
+  "synthetic": true,
+  "http_status": 404,
+  "body": {},
+  "expected": {
+    "error": "not_found",
+    "preserve_previous": true
+  }
+}

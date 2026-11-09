@@ -1,0 +1,33 @@
+{
+  "synthetic": true,
+  "http_status": 200,
+  "body": {
+    "detailInfo": {
+      "nickname": "合成展示账号",
+      "level": 70,
+      "avatarDetailList": [
+        {
+          "avatarId": 1001,
+          "level": 80,
+          "promotion": 6,
+          "rank": 0,
+          "equipment": {
+            "tid": 20000,
+            "level": 80,
+            "promotion": 6,
+            "rank": 1
+          },
+          "relicList": [],
+          "skillTreeList": []
+        }
+      ]
+    },
+    "ttl": 60,
+    "region": "synthetic"
+  },
+  "expected": {
+    "showcase_count": 1,
+    "roster_complete": false,
+    "ownership_unlisted": "unknown"
+  }
+}

@@ -1,0 +1,39 @@
+[build-system]
+requires = ["hatchling==1.30.1"]
+build-backend = "hatchling.build"
+
+[project]
+name = "hsr-ai-companion"
+version = "0.1.3"
+description = "Windows 本地星穹铁道玩家助手：机制研究、个人记忆与定量分析"
+license = {file = "LICENSE"}
+requires-python = ">=3.12,<3.13"
+dependencies = ["jsonschema>=4.23,<5", "cryptography>=46,<51"]
+
+[project.scripts]
+companion = "companion.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/companion"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"schemas" = "companion/resources/schemas"
+"migrations" = "companion/resources/migrations"
+"adapters/common" = "companion/resources/adapters/common"
+"adapters/codex" = "companion/resources/adapters/codex"
+"skills" = "companion/resources/skills"
+"manifests/simulator.lock.json" = "companion/resources/manifests/simulator.lock.json"
+"manifests/coverage.json" = "companion/resources/manifests/coverage.json"
+"manifests/build-catalog.json" = "companion/resources/manifests/build-catalog.json"
+"manifests/analysis-mechanics.json" = "companion/resources/manifests/analysis-mechanics.json"
+"licenses/HSR_Nous-MIT.txt" = "companion/resources/licenses/HSR_Nous-MIT.txt"
+"manifests/release.schema.json" = "companion/resources/schemas/release.schema.json"
+"adapters/claude-code" = "companion/resources/adapters/claude-code"
+"adapters/dsh" = "companion/resources/adapters/dsh"
+
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--strict-markers --import-mode=importlib"
+markers = ["live: explicit external network or real Agent acceptance (requires --run-live)"]
+

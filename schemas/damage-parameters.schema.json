@@ -1,0 +1,183 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "damage_type": {
+      "enum": [
+        "direct",
+        "dot",
+        "break",
+        "super_break",
+        "true",
+        "elation"
+      ]
+    },
+    "stat": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1000000000000.0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "unit": {
+          "const": "flat"
+        },
+        "basis": {
+          "enum": [
+            "public_panel",
+            "base"
+          ]
+        },
+        "equipment_bonus": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1000000000000.0
+        },
+        "precision": {
+          "anyOf": [
+            {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "value",
+        "unit",
+        "basis",
+        "equipment_bonus"
+      ],
+      "additionalProperties": false
+    },
+    "multiplier": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1000
+    },
+    "flat_damage": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1000000000000.0
+    },
+    "attacker_level": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 100
+    },
+    "enemy_level": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 200
+    },
+    "damage_bonus": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "def_reduction": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 10
+    },
+    "def_ignore": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 10
+    },
+    "resistance": {
+      "type": "number",
+      "minimum": -1,
+      "maximum": 1
+    },
+    "res_penetration": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 10
+    },
+    "vulnerability": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "crit_rate": {
+      "type": "number",
+      "minimum": -10,
+      "maximum": 10
+    },
+    "crit_damage": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "crit_mode": {
+      "enum": [
+        "expected",
+        "crit",
+        "noncrit"
+      ]
+    },
+    "broken": {
+      "type": "boolean"
+    },
+    "change": {
+      "type": "object",
+      "properties": {
+        "field": {
+          "enum": [
+            "multiplier",
+            "flat_damage",
+            "damage_bonus",
+            "def_reduction",
+            "def_ignore",
+            "resistance",
+            "res_penetration",
+            "vulnerability",
+            "crit_rate",
+            "crit_damage"
+          ]
+        },
+        "value": {
+          "type": "number",
+          "minimum": -10,
+          "maximum": 1000000000000.0
+        }
+      },
+      "required": [
+        "field",
+        "value"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "damage_type",
+    "stat",
+    "multiplier",
+    "flat_damage",
+    "attacker_level",
+    "enemy_level",
+    "damage_bonus",
+    "def_reduction",
+    "def_ignore",
+    "resistance",
+    "res_penetration",
+    "vulnerability",
+    "crit_rate",
+    "crit_damage",
+    "crit_mode",
+    "broken"
+  ],
+  "additionalProperties": false
+}

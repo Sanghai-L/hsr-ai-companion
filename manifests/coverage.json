@@ -1,0 +1,618 @@
+{
+  "schema_version": 1,
+  "backend_commit": "f8935ddb407b297732fbd3c624d55897e3e648b9",
+  "game_accuracy_certified": false,
+  "character_paths": {
+    "1408:base": "Warrior",
+    "1412:base": "Shaman",
+    "1313:base": "Shaman",
+    "1414:base": "Knight",
+    "1308:base": "Warlock",
+    "1006:base": "Warlock",
+    "1106:base": "Warlock",
+    "1304:base": "Knight"
+  },
+  "scenarios": {
+    "alpha-moc": {
+      "enemy_ids": [
+        "3013010",
+        "1023020",
+        "3024020"
+      ],
+      "game_version": "4.4",
+      "period": "4.4.1",
+      "source_snapshot_sha256": "a5e802a2e7eb278716b0fbf666f3080bee324358104761af445047988e6fde12"
+    }
+  },
+  "entries": [
+    {
+      "key": "character:1408:base",
+      "status": "approximate",
+      "reason": "锁定模板实际执行；角色 caveats 与历史规则未逐项游戏核验",
+      "impact": "可能改变伤害、行动、资源及队伍排序",
+      "validation_cases": [
+        "tests/simulation/test_backend_adapter.py",
+        "docs/feasibility/simulator-probe.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "eidolon:1408:0",
+      "status": "approximate",
+      "reason": "锁定模板实际执行；角色 caveats 与历史规则未逐项游戏核验",
+      "impact": "可能改变伤害、行动、资源及队伍排序",
+      "validation_cases": [
+        "tests/simulation/test_backend_adapter.py",
+        "docs/feasibility/simulator-probe.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "traces:1408:all_unlocked",
+      "status": "approximate",
+      "reason": "锁定模板实际执行；角色 caveats 与历史规则未逐项游戏核验",
+      "impact": "可能改变伤害、行动、资源及队伍排序",
+      "validation_cases": [
+        "tests/simulation/test_backend_adapter.py",
+        "docs/feasibility/simulator-probe.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "character:1412:base",
+      "status": "approximate",
+      "reason": "锁定模板实际执行；角色 caveats 与历史规则未逐项游戏核验",
+      "impact": "可能改变伤害、行动、资源及队伍排序",
+      "validation_cases": [
+        "tests/simulation/test_backend_adapter.py",
+        "docs/feasibility/simulator-probe.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "eidolon:1412:0",
+      "status": "approximate",
+      "reason": "锁定模板实际执行；角色 caveats 与历史规则未逐项游戏核验",
+      "impact": "可能改变伤害、行动、资源及队伍排序",
+      "validation_cases": [
+        "tests/simulation/test_backend_adapter.py",
+        "docs/feasibility/simulator-probe.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "traces:1412:all_unlocked",
+      "status": "approximate",
+      "reason": "锁定模板实际执行；角色 caveats 与历史规则未逐项游戏核验",
+      "impact": "可能改变伤害、行动、资源及队伍排序",
+      "validation_cases": [
+        "tests/simulation/test_backend_adapter.py",
+        "docs/feasibility/simulator-probe.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "character:1313:base",
+      "status": "approximate",
+      "reason": "锁定模板实际执行；角色 caveats 与历史规则未逐项游戏核验",
+      "impact": "可能改变伤害、行动、资源及队伍排序",
+      "validation_cases": [
+        "tests/simulation/test_backend_adapter.py",
+        "docs/feasibility/simulator-probe.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "eidolon:1313:0",
+      "status": "approximate",
+      "reason": "锁定模板实际执行；角色 caveats 与历史规则未逐项游戏核验",
+      "impact": "可能改变伤害、行动、资源及队伍排序",
+      "validation_cases": [
+        "tests/simulation/test_backend_adapter.py",
+        "docs/feasibility/simulator-probe.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "traces:1313:all_unlocked",
+      "status": "approximate",
+      "reason": "锁定模板实际执行；角色 caveats 与历史规则未逐项游戏核验",
+      "impact": "可能改变伤害、行动、资源及队伍排序",
+      "validation_cases": [
+        "tests/simulation/test_backend_adapter.py",
+        "docs/feasibility/simulator-probe.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "character:1414:base",
+      "status": "approximate",
+      "reason": "锁定模板实际执行；角色 caveats 与历史规则未逐项游戏核验",
+      "impact": "可能改变伤害、行动、资源及队伍排序",
+      "validation_cases": [
+        "tests/simulation/test_backend_adapter.py",
+        "docs/feasibility/simulator-probe.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "eidolon:1414:0",
+      "status": "approximate",
+      "reason": "锁定模板实际执行；角色 caveats 与历史规则未逐项游戏核验",
+      "impact": "可能改变伤害、行动、资源及队伍排序",
+      "validation_cases": [
+        "tests/simulation/test_backend_adapter.py",
+        "docs/feasibility/simulator-probe.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "traces:1414:all_unlocked",
+      "status": "approximate",
+      "reason": "锁定模板实际执行；角色 caveats 与历史规则未逐项游戏核验",
+      "impact": "可能改变伤害、行动、资源及队伍排序",
+      "validation_cases": [
+        "tests/simulation/test_backend_adapter.py",
+        "docs/feasibility/simulator-probe.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "character:1308:base",
+      "status": "approximate",
+      "reason": "锁定模板实际执行；角色 caveats 与历史规则未逐项游戏核验",
+      "impact": "可能改变伤害、行动、资源及队伍排序",
+      "validation_cases": [
+        "tests/simulation/test_backend_adapter.py",
+        "docs/feasibility/simulator-probe.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "eidolon:1308:0",
+      "status": "approximate",
+      "reason": "锁定模板实际执行；角色 caveats 与历史规则未逐项游戏核验",
+      "impact": "可能改变伤害、行动、资源及队伍排序",
+      "validation_cases": [
+        "tests/simulation/test_backend_adapter.py",
+        "docs/feasibility/simulator-probe.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "traces:1308:all_unlocked",
+      "status": "approximate",
+      "reason": "锁定模板实际执行；角色 caveats 与历史规则未逐项游戏核验",
+      "impact": "可能改变伤害、行动、资源及队伍排序",
+      "validation_cases": [
+        "tests/simulation/test_backend_adapter.py",
+        "docs/feasibility/simulator-probe.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "character:1006:base",
+      "status": "approximate",
+      "reason": "锁定模板实际执行；角色 caveats 与历史规则未逐项游戏核验",
+      "impact": "可能改变伤害、行动、资源及队伍排序",
+      "validation_cases": [
+        "tests/simulation/test_backend_adapter.py",
+        "docs/feasibility/simulator-probe.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "eidolon:1006:0",
+      "status": "approximate",
+      "reason": "锁定模板实际执行；角色 caveats 与历史规则未逐项游戏核验",
+      "impact": "可能改变伤害、行动、资源及队伍排序",
+      "validation_cases": [
+        "tests/simulation/test_backend_adapter.py",
+        "docs/feasibility/simulator-probe.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "traces:1006:all_unlocked",
+      "status": "approximate",
+      "reason": "锁定模板实际执行；角色 caveats 与历史规则未逐项游戏核验",
+      "impact": "可能改变伤害、行动、资源及队伍排序",
+      "validation_cases": [
+        "tests/simulation/test_backend_adapter.py",
+        "docs/feasibility/simulator-probe.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "character:1106:base",
+      "status": "approximate",
+      "reason": "锁定模板实际执行；角色 caveats 与历史规则未逐项游戏核验",
+      "impact": "可能改变伤害、行动、资源及队伍排序",
+      "validation_cases": [
+        "tests/simulation/test_backend_adapter.py",
+        "docs/feasibility/simulator-probe.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "eidolon:1106:0",
+      "status": "approximate",
+      "reason": "锁定模板实际执行；角色 caveats 与历史规则未逐项游戏核验",
+      "impact": "可能改变伤害、行动、资源及队伍排序",
+      "validation_cases": [
+        "tests/simulation/test_backend_adapter.py",
+        "docs/feasibility/simulator-probe.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "traces:1106:all_unlocked",
+      "status": "approximate",
+      "reason": "锁定模板实际执行；角色 caveats 与历史规则未逐项游戏核验",
+      "impact": "可能改变伤害、行动、资源及队伍排序",
+      "validation_cases": [
+        "tests/simulation/test_backend_adapter.py",
+        "docs/feasibility/simulator-probe.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "character:1304:base",
+      "status": "approximate",
+      "reason": "锁定模板实际执行；角色 caveats 与历史规则未逐项游戏核验",
+      "impact": "可能改变伤害、行动、资源及队伍排序",
+      "validation_cases": [
+        "tests/simulation/test_backend_adapter.py",
+        "docs/feasibility/simulator-probe.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "eidolon:1304:0",
+      "status": "approximate",
+      "reason": "锁定模板实际执行；角色 caveats 与历史规则未逐项游戏核验",
+      "impact": "可能改变伤害、行动、资源及队伍排序",
+      "validation_cases": [
+        "tests/simulation/test_backend_adapter.py",
+        "docs/feasibility/simulator-probe.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "traces:1304:all_unlocked",
+      "status": "approximate",
+      "reason": "锁定模板实际执行；角色 caveats 与历史规则未逐项游戏核验",
+      "impact": "可能改变伤害、行动、资源及队伍排序",
+      "validation_cases": [
+        "tests/simulation/test_backend_adapter.py",
+        "docs/feasibility/simulator-probe.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "enemy:3013010:stats",
+      "status": "approximate",
+      "reason": "D038场景适配已将hard=3/elite=164数值绑定到真实编译对象；尚无完整游戏条件校准",
+      "impact": "来源数值核对通过仍不能排除历史版本或游戏机制误差",
+      "validation_cases": [
+        "tests/modes/test_moc.py",
+        "benchmarks/modes/moc/README.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "enemy:3013010:resistance",
+      "status": "approximate",
+      "reason": "D038显式导入冻结元素抗性；特殊减伤和阶段联动仍缺失",
+      "impact": "基础抗性已绑定，但特殊阶段仍可能改变元素收益与排名",
+      "validation_cases": [
+        "tests/modes/test_moc.py",
+        "benchmarks/modes/moc/README.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "enemy:3013010:ai",
+      "status": "unsupported",
+      "reason": "敌方只有占位动作；没有完整出招／控制／召唤逻辑",
+      "impact": "生存、受击回能与资源无法预测",
+      "validation_cases": [
+        "docs/feasibility/simulator-probe.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "enemy:3013010:phase",
+      "status": "unsupported",
+      "reason": "缺少首个场景的敌人阶段与特殊减伤／资源联动",
+      "impact": "通关可行性与比较可能改变",
+      "validation_cases": [
+        "docs/feasibility/simulator-probe.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "enemy:1023020:stats",
+      "status": "approximate",
+      "reason": "D038场景适配已将hard=3/elite=164数值绑定到真实编译对象；尚无完整游戏条件校准",
+      "impact": "来源数值核对通过仍不能排除历史版本或游戏机制误差",
+      "validation_cases": [
+        "tests/modes/test_moc.py",
+        "benchmarks/modes/moc/README.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "enemy:1023020:resistance",
+      "status": "approximate",
+      "reason": "D038显式导入冻结元素抗性；特殊减伤和阶段联动仍缺失",
+      "impact": "基础抗性已绑定，但特殊阶段仍可能改变元素收益与排名",
+      "validation_cases": [
+        "tests/modes/test_moc.py",
+        "benchmarks/modes/moc/README.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "enemy:1023020:ai",
+      "status": "unsupported",
+      "reason": "敌方只有占位动作；没有完整出招／控制／召唤逻辑",
+      "impact": "生存、受击回能与资源无法预测",
+      "validation_cases": [
+        "docs/feasibility/simulator-probe.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "enemy:1023020:phase",
+      "status": "unsupported",
+      "reason": "缺少首个场景的敌人阶段与特殊减伤／资源联动",
+      "impact": "通关可行性与比较可能改变",
+      "validation_cases": [
+        "docs/feasibility/simulator-probe.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "enemy:3024020:stats",
+      "status": "approximate",
+      "reason": "D038场景适配已将hard=3/elite=164数值绑定到真实编译对象；尚无完整游戏条件校准",
+      "impact": "来源数值核对通过仍不能排除历史版本或游戏机制误差",
+      "validation_cases": [
+        "tests/modes/test_moc.py",
+        "benchmarks/modes/moc/README.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "enemy:3024020:resistance",
+      "status": "approximate",
+      "reason": "D038显式导入冻结元素抗性；特殊减伤和阶段联动仍缺失",
+      "impact": "基础抗性已绑定，但特殊阶段仍可能改变元素收益与排名",
+      "validation_cases": [
+        "tests/modes/test_moc.py",
+        "benchmarks/modes/moc/README.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "enemy:3024020:ai",
+      "status": "unsupported",
+      "reason": "敌方只有占位动作；没有完整出招／控制／召唤逻辑",
+      "impact": "生存、受击回能与资源无法预测",
+      "validation_cases": [
+        "docs/feasibility/simulator-probe.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "enemy:3024020:phase",
+      "status": "unsupported",
+      "reason": "缺少首个场景的敌人阶段与特殊减伤／资源联动",
+      "impact": "通关可行性与比较可能改变",
+      "validation_cases": [
+        "docs/feasibility/simulator-probe.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "system:action_order",
+      "status": "approximate",
+      "reason": "核心相关测试及两队固定种子工程执行，未获整场客户端精度资格",
+      "impact": "模型内复现不能排除系统误差",
+      "validation_cases": [
+        "tests/simulation/test_backend_adapter.py",
+        "docs/feasibility/simulator-probe.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "system:skill_points",
+      "status": "approximate",
+      "reason": "核心相关测试及两队固定种子工程执行，未获整场客户端精度资格",
+      "impact": "模型内复现不能排除系统误差",
+      "validation_cases": [
+        "tests/simulation/test_backend_adapter.py",
+        "docs/feasibility/simulator-probe.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "system:energy",
+      "status": "approximate",
+      "reason": "核心相关测试及两队固定种子工程执行，未获整场客户端精度资格",
+      "impact": "模型内复现不能排除系统误差",
+      "validation_cases": [
+        "tests/simulation/test_backend_adapter.py",
+        "docs/feasibility/simulator-probe.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "system:critical_roll",
+      "status": "approximate",
+      "reason": "核心相关测试及两队固定种子工程执行，未获整场客户端精度资格",
+      "impact": "模型内复现不能排除系统误差",
+      "validation_cases": [
+        "tests/simulation/test_backend_adapter.py",
+        "docs/feasibility/simulator-probe.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "system:direct_damage",
+      "status": "approximate",
+      "reason": "核心相关测试及两队固定种子工程执行，未获整场客户端精度资格",
+      "impact": "模型内复现不能排除系统误差",
+      "validation_cases": [
+        "tests/simulation/test_backend_adapter.py",
+        "docs/feasibility/simulator-probe.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "system:break",
+      "status": "approximate",
+      "reason": "核心相关测试及两队固定种子工程执行，未获整场客户端精度资格",
+      "impact": "模型内复现不能排除系统误差",
+      "validation_cases": [
+        "tests/simulation/test_backend_adapter.py",
+        "docs/feasibility/simulator-probe.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "system:death",
+      "status": "approximate",
+      "reason": "核心相关测试及两队固定种子工程执行，未获整场客户端精度资格",
+      "impact": "模型内复现不能排除系统误差",
+      "validation_cases": [
+        "tests/simulation/test_backend_adapter.py",
+        "docs/feasibility/simulator-probe.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "system:wave_transition",
+      "status": "approximate",
+      "reason": "核心相关测试及两队固定种子工程执行，未获整场客户端精度资格",
+      "impact": "模型内复现不能排除系统误差",
+      "validation_cases": [
+        "tests/simulation/test_backend_adapter.py",
+        "docs/feasibility/simulator-probe.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "system:cycle_boundary",
+      "status": "approximate",
+      "reason": "核心相关测试及两队固定种子工程执行，未获整场客户端精度资格",
+      "impact": "模型内复现不能排除系统误差",
+      "validation_cases": [
+        "tests/simulation/test_backend_adapter.py",
+        "docs/feasibility/simulator-probe.md"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "scenario:alpha-moc:lineup",
+      "status": "verified",
+      "reason": "冻结历史4.4.1/1034/12上半编成；不是当前关卡声明",
+      "impact": "只证明编成来源，不证明全场机制",
+      "validation_cases": [
+        "benchmarks/catalog.json"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "scenario:alpha-moc:historical_rules",
+      "status": "approximate",
+      "reason": "使用锁定较新模板运行历史编成；不等于还原全部4.4规则",
+      "impact": "跨版本差异可能改变队伍收益",
+      "validation_cases": [
+        "benchmarks/catalog.json"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "scenario:alpha-moc:turbulence:inactive",
+      "status": "verified",
+      "reason": "该增益只选巡猎／智识；已冻结候选没有符合命途的角色",
+      "impact": "只适用于当前八名候选；改队须重检",
+      "validation_cases": [
+        "benchmarks/catalog.json"
+      ],
+      "model_executable": true,
+      "critical": true
+    },
+    {
+      "key": "scenario:alpha-moc:turbulence:active",
+      "status": "unsupported",
+      "reason": "需要立即行动和增伤的关卡效果尚未接线",
+      "impact": "行动顺序与收益改变",
+      "validation_cases": [
+        "benchmarks/catalog.json"
+      ],
+      "model_executable": false,
+      "critical": true
+    },
+    {
+      "key": "system:techniques",
+      "status": "unknown",
+      "reason": "秘技顺序与初始资源缺乏已对齐的场景输入",
+      "impact": "开局资源与阶段可能改变",
+      "validation_cases": [
+        "benchmarks/catalog.json"
+      ],
+      "model_executable": false,
+      "critical": true
+    }
+  ]
+}

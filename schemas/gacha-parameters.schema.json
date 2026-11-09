@@ -1,0 +1,143 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "rules": {
+      "oneOf": [
+        {
+          "enum": [
+            "hsr-character-assumed",
+            "hsr-light-cone-assumed"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            },
+            "pool_type": {
+              "enum": [
+                "character",
+                "light_cone",
+                "synthetic"
+              ]
+            },
+            "hard_pity": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100
+            },
+            "featured_rate": {
+              "type": "number",
+              "minimum": 1e-08,
+              "maximum": 1
+            },
+            "hazards": {
+              "type": "array",
+              "items": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "maxItems": 100,
+              "minItems": 1
+            },
+            "curve_kind": {
+              "enum": [
+                "synthetic",
+                "explicit_assumption",
+                "empirical_assumption"
+              ]
+            },
+            "source_refs": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              },
+              "maxItems": 10,
+              "minItems": 1
+            },
+            "note": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2000
+            }
+          },
+          "required": [
+            "id",
+            "pool_type",
+            "hard_pity",
+            "featured_rate",
+            "hazards",
+            "curve_kind",
+            "source_refs",
+            "note"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "state": {
+      "type": "object",
+      "properties": {
+        "pool_type": {
+          "enum": [
+            "character",
+            "light_cone",
+            "synthetic"
+          ]
+        },
+        "pity": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 99
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "guaranteed": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "pool_type",
+        "pity",
+        "guaranteed"
+      ],
+      "additionalProperties": false
+    },
+    "pulls": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 2000
+    },
+    "copies": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 7
+    }
+  },
+  "required": [
+    "rules",
+    "state",
+    "pulls",
+    "copies"
+  ],
+  "additionalProperties": false
+}

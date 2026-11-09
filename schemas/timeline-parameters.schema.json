@@ -1,0 +1,381 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "actors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80
+          },
+          "speed": {
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "maximum": 10000
+          },
+          "speed_precision": {
+            "anyOf": [
+              {
+                "type": "number",
+                "minimum": 1e-06,
+                "maximum": 100
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "energy": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 10000
+          },
+          "energy_cap": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 10000
+          },
+          "energy_regen": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 10
+          },
+          "rotation": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "kind": {
+                  "enum": [
+                    "basic",
+                    "skill"
+                  ]
+                },
+                "sp_cost": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 20
+                },
+                "sp_gain": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 20
+                },
+                "energy_gain": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 10000
+                },
+                "regen_applies": {
+                  "type": "boolean"
+                },
+                "energy_cost": {
+                  "const": 0
+                },
+                "effects": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "enum": [
+                          "speed",
+                          "advance",
+                          "delay"
+                        ]
+                      },
+                      "target": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 80
+                      },
+                      "value": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 10000
+                      }
+                    },
+                    "required": [
+                      "kind",
+                      "target",
+                      "value"
+                    ],
+                    "additionalProperties": false,
+                    "allOf": [
+                      {
+                        "if": {
+                          "properties": {
+                            "kind": {
+                              "const": "speed"
+                            }
+                          }
+                        },
+                        "then": {
+                          "properties": {
+                            "value": {
+                              "exclusiveMinimum": 0
+                            }
+                          }
+                        },
+                        "else": {
+                          "properties": {
+                            "value": {
+                              "maximum": 10
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "maxItems": 20,
+                  "minItems": 0
+                }
+              },
+              "required": [
+                "kind",
+                "sp_cost",
+                "sp_gain",
+                "energy_gain",
+                "regen_applies",
+                "effects"
+              ],
+              "additionalProperties": false
+            },
+            "maxItems": 20,
+            "minItems": 1
+          }
+        },
+        "required": [
+          "id",
+          "speed",
+          "energy",
+          "energy_cap",
+          "energy_regen",
+          "rotation"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 8,
+      "minItems": 1
+    },
+    "sp": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 20
+    },
+    "sp_cap": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 20
+    },
+    "until_av": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100000
+    },
+    "scheduled": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "properties": {
+              "at": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100000
+              },
+              "actor": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 80
+              },
+              "kind": {
+                "enum": [
+                  "speed",
+                  "advance",
+                  "delay"
+                ]
+              },
+              "value": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 10000
+              }
+            },
+            "required": [
+              "at",
+              "actor",
+              "kind",
+              "value"
+            ],
+            "additionalProperties": false,
+            "allOf": [
+              {
+                "if": {
+                  "properties": {
+                    "kind": {
+                      "const": "speed"
+                    }
+                  }
+                },
+                "then": {
+                  "properties": {
+                    "value": {
+                      "exclusiveMinimum": 0
+                    }
+                  }
+                },
+                "else": {
+                  "properties": {
+                    "value": {
+                      "maximum": 10
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "at": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100000
+              },
+              "actor": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 80
+              },
+              "kind": {
+                "const": "ultimate"
+              },
+              "action": {
+                "type": "object",
+                "properties": {
+                  "kind": {
+                    "const": "ultimate"
+                  },
+                  "sp_cost": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 20
+                  },
+                  "sp_gain": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 20
+                  },
+                  "energy_gain": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 10000
+                  },
+                  "regen_applies": {
+                    "type": "boolean"
+                  },
+                  "energy_cost": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 10000
+                  },
+                  "effects": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "kind": {
+                          "enum": [
+                            "speed",
+                            "advance",
+                            "delay"
+                          ]
+                        },
+                        "target": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 80
+                        },
+                        "value": {
+                          "type": "number",
+                          "minimum": 0,
+                          "maximum": 10000
+                        }
+                      },
+                      "required": [
+                        "kind",
+                        "target",
+                        "value"
+                      ],
+                      "additionalProperties": false,
+                      "allOf": [
+                        {
+                          "if": {
+                            "properties": {
+                              "kind": {
+                                "const": "speed"
+                              }
+                            }
+                          },
+                          "then": {
+                            "properties": {
+                              "value": {
+                                "exclusiveMinimum": 0
+                              }
+                            }
+                          },
+                          "else": {
+                            "properties": {
+                              "value": {
+                                "maximum": 10
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "maxItems": 20,
+                    "minItems": 0
+                  }
+                },
+                "required": [
+                  "kind",
+                  "sp_cost",
+                  "sp_gain",
+                  "energy_gain",
+                  "regen_applies",
+                  "effects",
+                  "energy_cost"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "at",
+              "actor",
+              "kind",
+              "action"
+            ],
+            "additionalProperties": false
+          }
+        ]
+      },
+      "maxItems": 100,
+      "minItems": 0
+    }
+  },
+  "required": [
+    "actors",
+    "sp",
+    "sp_cap",
+    "until_av",
+    "scheduled"
+  ],
+  "additionalProperties": false
+}

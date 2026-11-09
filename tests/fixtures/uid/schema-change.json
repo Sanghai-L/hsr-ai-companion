@@ -1,0 +1,14 @@
+{
+  "synthetic": true,
+  "http_status": 200,
+  "body": {
+    "profile_v2": {
+      "characters": []
+    },
+    "ttl": 60
+  },
+  "expected": {
+    "error": "schema_changed",
+    "preserve_previous": true
+  }
+}

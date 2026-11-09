@@ -1,0 +1,63 @@
+{
+  "id": "p3-probability-tree-1",
+  "experiment": {
+    "schema_version": 1,
+    "kind": "gacha",
+    "conditions": {
+      "game_version": "4.6",
+      "mode": "local-analysis",
+      "investment": "synthetic",
+      "notes": "原创合成基准，非真实账号或当前卡池"
+    },
+    "versions": {
+      "engine": "0.1.2.dev1",
+      "rules": "p3-1",
+      "knowledge": "0.2.0",
+      "data": "p3-fixtures-1"
+    },
+    "budget": {
+      "max_events": 100,
+      "max_av": 1000,
+      "max_transitions": 3000000,
+      "max_seconds": 10
+    },
+    "parameters": {
+      "rules": {
+        "id": "toy-half-then-guarantee",
+        "pool_type": "synthetic",
+        "hard_pity": 2,
+        "featured_rate": 1,
+        "hazards": [
+          0.5,
+          1
+        ],
+        "curve_kind": "synthetic",
+        "source_refs": [
+          "synthetic:exhaustive-two-pull-tree"
+        ],
+        "note": "仅验证算法，不代表游戏卡池"
+      },
+      "state": {
+        "pool_type": "synthetic",
+        "pity": 0,
+        "guaranteed": false
+      },
+      "pulls": 1,
+      "copies": 1
+    },
+    "assumptions": [
+      "所有输入均为明确的合成条件，不代表实际角色整场表现"
+    ],
+    "source_refs": [
+      "synthetic:p3-independent-hand-calculation"
+    ]
+  },
+  "first_hit_distribution": [
+    0,
+    0.5,
+    0.5
+  ],
+  "success_probability": 0.5,
+  "expected_pulls_to_target": 1.5,
+  "derivation": "first success probability 1/2; only failure branch (1/2) must succeed at pull 2; expectation=1/2+2/2"
+}

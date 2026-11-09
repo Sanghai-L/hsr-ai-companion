@@ -1,0 +1,13 @@
+{
+  "synthetic": true,
+  "http_status": 429,
+  "headers": {
+    "Retry-After": "60"
+  },
+  "body": {},
+  "expected": {
+    "error": "rate_limited",
+    "preserve_previous": true,
+    "automatic_refresh": false
+  }
+}

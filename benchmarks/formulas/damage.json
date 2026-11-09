@@ -1,0 +1,66 @@
+{
+  "id": "p3-damage-hand-1",
+  "experiment": {
+    "schema_version": 1,
+    "kind": "damage",
+    "conditions": {
+      "game_version": "4.6",
+      "mode": "local-analysis",
+      "investment": "synthetic",
+      "notes": "原创合成基准，非真实账号或当前卡池"
+    },
+    "versions": {
+      "engine": "0.1.2.dev1",
+      "rules": "p3-1",
+      "knowledge": "0.2.0",
+      "data": "p3-fixtures-1"
+    },
+    "budget": {
+      "max_events": 100,
+      "max_av": 1000,
+      "max_transitions": 3000000,
+      "max_seconds": 10
+    },
+    "parameters": {
+      "damage_type": "direct",
+      "stat": {
+        "value": 1000,
+        "unit": "flat",
+        "basis": "public_panel",
+        "equipment_bonus": 0
+      },
+      "multiplier": 2,
+      "flat_damage": 0,
+      "attacker_level": 80,
+      "enemy_level": 80,
+      "damage_bonus": 0.5,
+      "def_reduction": 0,
+      "def_ignore": 0,
+      "resistance": 0.2,
+      "res_penetration": 0,
+      "vulnerability": 0.25,
+      "crit_rate": 0.5,
+      "crit_damage": 1,
+      "crit_mode": "expected",
+      "broken": false
+    },
+    "assumptions": [
+      "所有输入均为明确的合成条件，不代表实际角色整场表现"
+    ],
+    "source_refs": [
+      "synthetic:p3-independent-hand-calculation"
+    ]
+  },
+  "expected": 2025,
+  "derivation": "1000*2 * 1.5 * 100/(100+100) * 0.8 * 1.25 * (1+0.5*1) * 0.9 = 2025",
+  "zone_expected": {
+    "base_damage": 2000,
+    "damage_bonus": 1.5,
+    "defense": 0.5,
+    "resistance": 0.8,
+    "vulnerability": 1.25,
+    "crit": 1.5,
+    "toughness": 0.9
+  },
+  "independence": "answer specified using rational arithmetic, without invoking the implementation or simulator"
+}

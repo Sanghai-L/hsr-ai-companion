@@ -1,0 +1,69 @@
+{
+  "id": "paths",
+  "category": "basics",
+  "title": "命途描述定位，技能决定具体机制",
+  "aliases": [
+    "命途",
+    "存护",
+    "同谐",
+    "虚无"
+  ],
+  "version_min": "4.6",
+  "version_max": "4.6",
+  "information_state": "official_verified",
+  "evidence": "community",
+  "body_path": "basics/paths.md",
+  "namespace": "release",
+  "entities": [],
+  "conditions": [
+    "仅核对锁定 4.6 来源文本；不证明游戏内完整结算"
+  ],
+  "exceptions": [
+    "命途不保证伤害、辅助或生存能力可用统一强度排序。"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "ref": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/dbe8cdfcfb0bf657b9fe1cf92d5537f118ccb487/index_new/cn/characters.json#/1304",
+      "observed_at": "2026-11-08T03:35:25+00:00",
+      "license": "source rights reserved; facts paraphrased"
+    },
+    {
+      "type": "web",
+      "ref": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/dbe8cdfcfb0bf657b9fe1cf92d5537f118ccb487/index_new/cn/characters.json#/1313",
+      "observed_at": "2026-11-08T03:35:25+00:00",
+      "license": "source rights reserved; facts paraphrased"
+    },
+    {
+      "type": "web",
+      "ref": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/dbe8cdfcfb0bf657b9fe1cf92d5537f118ccb487/index_new/cn/characters.json#/1308",
+      "observed_at": "2026-11-08T03:35:25+00:00",
+      "license": "source rights reserved; facts paraphrased"
+    }
+  ],
+  "claims": [
+    {
+      "claim": "角色数据把砂金、星期日和黄泉分别列为存护、同谐和虚无。命途可用于初步定位，但配队时仍需看角色的实际技能与条件。",
+      "source_ref": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/dbe8cdfcfb0bf657b9fe1cf92d5537f118ccb487/index_new/cn/characters.json#/1304",
+      "locator": "/1304",
+      "source_sha256": "084a5cdb420d071bb41f057f218b141ff1930fe7293a4d5d48a967cdf29e27bc",
+      "verification": "source_text_checked; game-client interaction not verified"
+    },
+    {
+      "claim": "角色数据把砂金、星期日和黄泉分别列为存护、同谐和虚无。命途可用于初步定位，但配队时仍需看角色的实际技能与条件。",
+      "source_ref": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/dbe8cdfcfb0bf657b9fe1cf92d5537f118ccb487/index_new/cn/characters.json#/1313",
+      "locator": "/1313",
+      "source_sha256": "084a5cdb420d071bb41f057f218b141ff1930fe7293a4d5d48a967cdf29e27bc",
+      "verification": "source_text_checked; game-client interaction not verified"
+    },
+    {
+      "claim": "角色数据把砂金、星期日和黄泉分别列为存护、同谐和虚无。命途可用于初步定位，但配队时仍需看角色的实际技能与条件。",
+      "source_ref": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/dbe8cdfcfb0bf657b9fe1cf92d5537f118ccb487/index_new/cn/characters.json#/1308",
+      "locator": "/1308",
+      "source_sha256": "084a5cdb420d071bb41f057f218b141ff1930fe7293a4d5d48a967cdf29e27bc",
+      "verification": "source_text_checked; game-client interaction not verified"
+    }
+  ],
+  "verified_at": "2026-11-08T03:35:28+00:00",
+  "license": "Original factual summary; project distribution license undecided; game rights reserved"
+}

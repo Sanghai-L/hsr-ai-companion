@@ -1,0 +1,2 @@
+from .consent import ConsentPolicy
+

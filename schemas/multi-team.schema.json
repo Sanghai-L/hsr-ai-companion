@@ -1,0 +1,590 @@
+{
+  "type": "object",
+  "properties": {
+    "mode": {
+      "enum": [
+        "memory_of_chaos",
+        "pure_fiction",
+        "apocalyptic_shadow",
+        "anomaly_arbitration"
+      ]
+    },
+    "roster": {
+      "type": "object",
+      "properties": {
+        "origin": {
+          "const": "explicit_hypothesis"
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1500
+        },
+        "available_character_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 50
+          },
+          "minItems": 4,
+          "maxItems": 100,
+          "uniqueItems": true
+        },
+        "available_equipment_instances": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80
+          },
+          "minItems": 0,
+          "maxItems": 700,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "origin",
+        "notes",
+        "available_character_ids",
+        "available_equipment_instances"
+      ],
+      "additionalProperties": false
+    },
+    "slots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80
+          },
+          "stage_type": {
+            "enum": [
+              "side",
+              "knight",
+              "king"
+            ]
+          },
+          "request": {
+            "type": "object",
+            "properties": {
+              "schema_version": {
+                "const": 1
+              },
+              "method": {
+                "const": "representative-1"
+              },
+              "mode": {
+                "enum": [
+                  "memory_of_chaos",
+                  "pure_fiction",
+                  "apocalyptic_shadow",
+                  "anomaly_arbitration"
+                ]
+              },
+              "game_version": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 40
+              },
+              "data_version": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              },
+              "scenario": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 100
+                  },
+                  "period": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 100
+                  },
+                  "kind": {
+                    "const": "representative"
+                  },
+                  "enemy_level": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 200
+                  },
+                  "target_count": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 5
+                  },
+                  "resistance": {
+                    "type": "object",
+                    "properties": {
+                      "physical": {
+                        "type": "number",
+                        "minimum": -1,
+                        "maximum": 0.9
+                      },
+                      "fire": {
+                        "type": "number",
+                        "minimum": -1,
+                        "maximum": 0.9
+                      },
+                      "ice": {
+                        "type": "number",
+                        "minimum": -1,
+                        "maximum": 0.9
+                      },
+                      "lightning": {
+                        "type": "number",
+                        "minimum": -1,
+                        "maximum": 0.9
+                      },
+                      "wind": {
+                        "type": "number",
+                        "minimum": -1,
+                        "maximum": 0.9
+                      },
+                      "imaginary": {
+                        "type": "number",
+                        "minimum": -1,
+                        "maximum": 0.9
+                      }
+                    },
+                    "required": [
+                      "physical",
+                      "fire",
+                      "ice",
+                      "lightning",
+                      "wind",
+                      "imaginary"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "weaknesses": {
+                    "type": "array",
+                    "items": {
+                      "enum": [
+                        "physical",
+                        "fire",
+                        "ice",
+                        "lightning",
+                        "wind",
+                        "imaginary",
+                        "quantum"
+                      ]
+                    },
+                    "minItems": 0,
+                    "maxItems": 7,
+                    "uniqueItems": true
+                  },
+                  "window_av": {
+                    "type": "number",
+                    "minimum": 0.001,
+                    "maximum": 1000
+                  },
+                  "initial_sp": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 10
+                  },
+                  "sp_cap": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 10
+                  },
+                  "initial_energy_fraction": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  "phases": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "until_av": {
+                          "type": "number",
+                          "minimum": 0.001,
+                          "maximum": 1000
+                        },
+                        "broken": {
+                          "type": "boolean"
+                        },
+                        "damage_taken_multiplier": {
+                          "type": "number",
+                          "minimum": 0,
+                          "maximum": 5
+                        },
+                        "toughness_available": {
+                          "type": "boolean"
+                        },
+                        "hp_above_half": {
+                          "type": "boolean"
+                        },
+                        "enemy_slowed": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "until_av",
+                        "broken",
+                        "damage_taken_multiplier",
+                        "toughness_available",
+                        "hp_above_half",
+                        "enemy_slowed"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "minItems": 1,
+                    "maxItems": 2,
+                    "uniqueItems": false
+                  },
+                  "threshold_crossings": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "at_av": {
+                          "type": "number",
+                          "minimum": 0,
+                          "maximum": 1000
+                        },
+                        "count": {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 5
+                        }
+                      },
+                      "required": [
+                        "at_av",
+                        "count"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "minItems": 0,
+                    "maxItems": 12,
+                    "uniqueItems": false
+                  },
+                  "respawn_policy": {
+                    "enum": [
+                      "none",
+                      "fixed_density"
+                    ]
+                  },
+                  "omitted": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 1500
+                    },
+                    "minItems": 1,
+                    "maxItems": 15,
+                    "uniqueItems": false
+                  }
+                },
+                "required": [
+                  "id",
+                  "period",
+                  "kind",
+                  "enemy_level",
+                  "target_count",
+                  "resistance",
+                  "weaknesses",
+                  "window_av",
+                  "initial_sp",
+                  "sp_cap",
+                  "initial_energy_fraction",
+                  "phases",
+                  "threshold_crossings",
+                  "respawn_policy",
+                  "omitted"
+                ],
+                "additionalProperties": false
+              },
+              "budget": {
+                "type": "object",
+                "properties": {
+                  "max_seconds": {
+                    "type": "number",
+                    "minimum": 1e-06,
+                    "maximum": 10
+                  },
+                  "max_actions": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 200
+                  },
+                  "max_candidates": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 4
+                  }
+                },
+                "required": [
+                  "max_seconds",
+                  "max_actions",
+                  "max_candidates"
+                ],
+                "additionalProperties": false
+              },
+              "candidates": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 80
+                    },
+                    "label": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 200
+                    },
+                    "investment_key": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 200
+                    },
+                    "origin": {
+                      "enum": [
+                        "synthetic",
+                        "hypothesis"
+                      ]
+                    },
+                    "members": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "character_id": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 50
+                          },
+                          "form_id": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 80
+                          },
+                          "level": {
+                            "type": "integer",
+                            "minimum": 1,
+                            "maximum": 80
+                          },
+                          "atk": {
+                            "anyOf": [
+                              {
+                                "type": "number",
+                                "minimum": 0,
+                                "maximum": 100000
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "speed": {
+                            "type": "number",
+                            "minimum": 1,
+                            "maximum": 500
+                          },
+                          "speed_precision": {
+                            "anyOf": [
+                              {
+                                "type": "number",
+                                "minimum": 1e-05,
+                                "maximum": 10
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "crit_rate": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1
+                          },
+                          "crit_damage": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 10
+                          },
+                          "damage_bonus": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 10
+                          },
+                          "energy_regen": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 5
+                          },
+                          "eidolon": {
+                            "const": 0
+                          },
+                          "major_traces": {
+                            "const": false
+                          },
+                          "rotation": {
+                            "type": "array",
+                            "items": {
+                              "enum": [
+                                "basic",
+                                "skill"
+                              ]
+                            },
+                            "minItems": 1,
+                            "maxItems": 6,
+                            "uniqueItems": false
+                          },
+                          "ultimate_policy": {
+                            "enum": [
+                              "never",
+                              "after_turn_when_ready"
+                            ]
+                          },
+                          "equipment_instances": {
+                            "type": "array",
+                            "items": {
+                              "type": "string",
+                              "minLength": 1,
+                              "maxLength": 80
+                            },
+                            "minItems": 0,
+                            "maxItems": 7,
+                            "uniqueItems": true
+                          },
+                          "required_mechanisms": {
+                            "type": "array",
+                            "items": {
+                              "type": "string",
+                              "minLength": 1,
+                              "maxLength": 120
+                            },
+                            "minItems": 0,
+                            "maxItems": 15,
+                            "uniqueItems": true
+                          }
+                        },
+                        "required": [
+                          "character_id",
+                          "form_id",
+                          "level",
+                          "atk",
+                          "speed",
+                          "speed_precision",
+                          "crit_rate",
+                          "crit_damage",
+                          "damage_bonus",
+                          "energy_regen",
+                          "eidolon",
+                          "major_traces",
+                          "rotation",
+                          "ultimate_policy",
+                          "equipment_instances",
+                          "required_mechanisms"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "minItems": 4,
+                      "maxItems": 4,
+                      "uniqueItems": false
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "label",
+                    "investment_key",
+                    "origin",
+                    "members"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 2,
+                "maxItems": 4,
+                "uniqueItems": false
+              },
+              "assumptions": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 1500
+                },
+                "minItems": 1,
+                "maxItems": 20,
+                "uniqueItems": false
+              },
+              "source_refs": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 2000
+                },
+                "minItems": 1,
+                "maxItems": 20,
+                "uniqueItems": false
+              },
+              "difference_declaration": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1500
+              }
+            },
+            "required": [
+              "schema_version",
+              "method",
+              "mode",
+              "game_version",
+              "data_version",
+              "scenario",
+              "budget",
+              "candidates",
+              "assumptions",
+              "source_refs"
+            ],
+            "additionalProperties": false,
+            "$schema": "https://json-schema.org/draft/2020-12/schema"
+          }
+        },
+        "required": [
+          "id",
+          "stage_type",
+          "request"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 2,
+      "maxItems": 4,
+      "uniqueItems": false
+    },
+    "max_combinations": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 256
+    },
+    "max_seconds": {
+      "type": "number",
+      "minimum": 1e-06,
+      "maximum": 10
+    }
+  },
+  "required": [
+    "mode",
+    "roster",
+    "slots",
+    "max_combinations",
+    "max_seconds"
+  ],
+  "additionalProperties": false
+}

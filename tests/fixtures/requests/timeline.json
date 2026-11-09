@@ -1,0 +1,62 @@
+{
+  "experiment": {
+    "schema_version": 1,
+    "kind": "timeline",
+    "conditions": {
+      "game_version": "4.6",
+      "mode": "local-analysis",
+      "investment": "synthetic",
+      "notes": "原创合成基准，非真实账号或当前卡池"
+    },
+    "versions": {
+      "engine": "0.1.3",
+      "rules": "p3-1",
+      "knowledge": "0.2.0",
+      "data": "p3-fixtures-1"
+    },
+    "budget": {
+      "max_events": 100,
+      "max_av": 1000,
+      "max_transitions": 3000000,
+      "max_seconds": 10
+    },
+    "parameters": {
+      "actors": [
+        {
+          "id": "A",
+          "speed": 100,
+          "energy": 0,
+          "energy_cap": 100,
+          "energy_regen": 0,
+          "rotation": [
+            {
+              "kind": "basic",
+              "sp_cost": 0,
+              "sp_gain": 1,
+              "energy_gain": 20,
+              "regen_applies": true,
+              "effects": []
+            }
+          ]
+        }
+      ],
+      "sp": 0,
+      "sp_cap": 5,
+      "until_av": 175,
+      "scheduled": [
+        {
+          "at": 50,
+          "actor": "A",
+          "kind": "speed",
+          "value": 200
+        }
+      ]
+    },
+    "assumptions": [
+      "所有输入均为明确的合成条件，不代表实际角色整场表现"
+    ],
+    "source_refs": [
+      "synthetic:p3-independent-hand-calculation"
+    ]
+  }
+}

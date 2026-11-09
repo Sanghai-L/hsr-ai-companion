@@ -1,0 +1,93 @@
+{
+  "origin": "synthetic",
+  "snapshot_id": null,
+  "members": [
+    {
+      "character_id": "1308",
+      "form_id": "1308:base",
+      "ownership": "unknown",
+      "level": 80,
+      "promotion": 6,
+      "eidolon": 0,
+      "skill_levels": {
+        "basic": 6,
+        "skill": 10,
+        "ultimate": 10,
+        "talent": 10
+      },
+      "trace_policy": "all_unlocked",
+      "light_cone": null,
+      "relics": [],
+      "attributes": {},
+      "source_refs": [
+        "synthetic:P0-controlled-no-equipment-build"
+      ]
+    },
+    {
+      "character_id": "1006",
+      "form_id": "1006:base",
+      "ownership": "unknown",
+      "level": 80,
+      "promotion": 6,
+      "eidolon": 0,
+      "skill_levels": {
+        "basic": 6,
+        "skill": 10,
+        "ultimate": 10,
+        "talent": 10
+      },
+      "trace_policy": "all_unlocked",
+      "light_cone": null,
+      "relics": [],
+      "attributes": {},
+      "source_refs": [
+        "synthetic:P0-controlled-no-equipment-build"
+      ]
+    },
+    {
+      "character_id": "1106",
+      "form_id": "1106:base",
+      "ownership": "unknown",
+      "level": 80,
+      "promotion": 6,
+      "eidolon": 0,
+      "skill_levels": {
+        "basic": 6,
+        "skill": 10,
+        "ultimate": 10,
+        "talent": 10
+      },
+      "trace_policy": "all_unlocked",
+      "light_cone": null,
+      "relics": [],
+      "attributes": {},
+      "source_refs": [
+        "synthetic:P0-controlled-no-equipment-build"
+      ]
+    },
+    {
+      "character_id": "1304",
+      "form_id": "1304:base",
+      "ownership": "unknown",
+      "level": 80,
+      "promotion": 6,
+      "eidolon": 0,
+      "skill_levels": {
+        "basic": 6,
+        "skill": 10,
+        "ultimate": 10,
+        "talent": 10
+      },
+      "trace_policy": "all_unlocked",
+      "light_cone": null,
+      "relics": [],
+      "attributes": {},
+      "source_refs": [
+        "synthetic:P0-controlled-no-equipment-build"
+      ]
+    }
+  ],
+  "assumptions": [
+    "E0，80级满突破，全行迹，6/10/10/10，无装备；初始3SP及50%普通能量是工程条件"
+  ]
+}

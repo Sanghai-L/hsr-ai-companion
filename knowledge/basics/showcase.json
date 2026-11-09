@@ -1,0 +1,58 @@
+{
+  "id": "showcase",
+  "category": "basics",
+  "title": "公开展示不等于完整持有清单",
+  "aliases": [
+    "UID",
+    "展示",
+    "未持有",
+    "背包",
+    "星琼",
+    "保底"
+  ],
+  "version_min": "4.6",
+  "version_max": "4.6",
+  "information_state": "official_verified",
+  "evidence": "community",
+  "body_path": "basics/showcase.md",
+  "namespace": "release",
+  "entities": [],
+  "conditions": [
+    "仅核对锁定 4.6 来源文本；不证明游戏内完整结算"
+  ],
+  "exceptions": [
+    "空展示不能单凭响应确定是隐藏还是未设置；账号只在明确导入或刷新时查询。"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "ref": "https://raw.githubusercontent.com/EnkaNetwork/API-docs/b94bc40528941126590e0eefb0f03278e7a44ec8/api.md#Showcase",
+      "observed_at": "2026-11-08T03:35:28+00:00",
+      "license": "source rights reserved; facts paraphrased"
+    },
+    {
+      "type": "web",
+      "ref": "https://raw.githubusercontent.com/EnkaNetwork/API-docs/b94bc40528941126590e0eefb0f03278e7a44ec8/api.md#ttl",
+      "observed_at": "2026-11-08T03:35:28+00:00",
+      "license": "source rights reserved; facts paraphrased"
+    }
+  ],
+  "claims": [
+    {
+      "claim": "Enka 的公开展示接口返回玩家展示的资料。未展示的角色与装备应保持未知；背包、完整持有、星琼和抽卡保底不能由展示推定。缓存 TTL 也不授权自动刷新。",
+      "source_ref": "https://raw.githubusercontent.com/EnkaNetwork/API-docs/b94bc40528941126590e0eefb0f03278e7a44ec8/api.md#Showcase",
+      "locator": "Showcase",
+      "source_sha256": "7aea988658a6a58fb532ec77dadf4f303710140685811762ab30cc88890ef06c",
+      "verification": "source_text_checked; game-client interaction not verified"
+    },
+    {
+      "claim": "Enka 的公开展示接口返回玩家展示的资料。未展示的角色与装备应保持未知；背包、完整持有、星琼和抽卡保底不能由展示推定。缓存 TTL 也不授权自动刷新。",
+      "source_ref": "https://raw.githubusercontent.com/EnkaNetwork/API-docs/b94bc40528941126590e0eefb0f03278e7a44ec8/api.md#ttl",
+      "locator": "ttl",
+      "source_sha256": "7aea988658a6a58fb532ec77dadf4f303710140685811762ab30cc88890ef06c",
+      "verification": "source_text_checked; game-client interaction not verified"
+    }
+  ],
+  "verified_at": "2026-11-08T03:35:28+00:00",
+  "license": "Original factual summary; project distribution license undecided; game rights reserved"
+}

@@ -1,0 +1,9 @@
+{
+  "synthetic": true,
+  "http_status": 400,
+  "body": {},
+  "expected": {
+    "error": "invalid_input",
+    "retryable": false
+  }
+}

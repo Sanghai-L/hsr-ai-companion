@@ -1,0 +1,15 @@
+{
+  "synthetic": true,
+  "http_status": 200,
+  "body": {
+    "detailInfo": {
+      "nickname": "合成空展示"
+    },
+    "ttl": 60
+  },
+  "expected": {
+    "showcase_count": 0,
+    "full_roster": "unknown",
+    "reason": "closed_or_empty_not_distinguishable"
+  }
+}
