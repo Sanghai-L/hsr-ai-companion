@@ -30,7 +30,8 @@ def record(task_id, *, status, artifacts, commands, evidence, summary, counts=No
                 artifacts=artifacts, commands=commands, evidence=evidence, summary=summary,
                 test_counts=counts, blockers=blockers or [], next_step=f"D{int(task_id[1:])+1:03}" if status == "DONE" else summary)
     write("docs/development/task-status.json", ledger)
-    header = "# 开发任务账本\n\nP6 按编号推进；证据及历史记录以 task-status.json 为准。当前只验收 Codex，另两宿主继续暂缓。\n\n"
+    completed = all(item["status"] == "DONE" for item in ledger["tasks"])
+    header = "# 开发任务账本\n\n" + ("D001～D058 已在当前 Windows／Codex 授权范围完成。" if completed else "P6 按编号推进。") + "证据及历史记录以 task-status.json 为准；另两宿主继续暂缓。\n\n"
     table = "| 任务 | 名称 | 直接依赖 | 状态 | 交付／证据／下一步 |\n|---|---|---|---|---|\n"
     for t in ledger["tasks"]:
         table += f"| {t['id']} | {t['title']} | {'、'.join(t['dependencies']) or '无'} | {t['status']} | {t.get('summary', t.get('next_step', '待执行'))} |\n"

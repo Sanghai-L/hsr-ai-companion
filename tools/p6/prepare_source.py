@@ -16,6 +16,7 @@ FILES = [".gitignore", ".gitattributes", "pyproject.toml", "requirements.in", "r
          "README.md", "INSTALL_AGENT.md", "CONTRIBUTING.md", "LICENSE"]
 DOCS = ["docs/coverage.md", "docs/privacy.md", "docs/security-boundaries.md", "docs/troubleshooting.md", "docs/contracts", "docs/release", "docs/maintenance",
         "docs/gates/P6-release-candidate.md",
+        "docs/gates/P6-release-candidate.json", "docs/gates/maintenance-ready.md", "docs/gates/maintenance-ready.json",
         "docs/validation/agent-evals.md", "docs/validation/windows-install-matrix.md", "docs/validation/performance.md", "docs/modes", ".github/ISSUE_TEMPLATE"]
 MANIFESTS = ["analysis-mechanics.json", "build-catalog.json", "coverage.json", "release.schema.json", "simulator.lock.json", "windows-runtime.lock.json"]
 
@@ -41,7 +42,9 @@ def prepare(output, media, knowledge):
         if any(part in {".local", ".venv", ".git", ".codex"} for part in relative.parts) or source.is_symlink():
             raise ValueError("源文件不在对外白名单中")
         content = source.read_bytes()
-        if any(marker in content for marker in (b"C:\\Users\\ASUS", b"D:\\Tencent\\Wechat", b"BEGIN "+b"PRIVATE KEY", b"BEGIN OPENSSH "+b"PRIVATE KEY")):
+        normalized = content.replace(b"\\\\", b"\\")
+        home = str(Path.home()).encode("utf-8")
+        if any(marker in normalized for marker in (home, home.replace(b"\\", b"/"), b"xwechat_"+b"files", b"BEGIN "+b"PRIVATE KEY", b"BEGIN OPENSSH "+b"PRIVATE KEY")):
             raise ValueError("对外文件包含本机身份路径或私钥标记："+str(relative))
         destination = output/relative
         destination.parent.mkdir(parents=True, exist_ok=True)

@@ -1,0 +1,38 @@
+{
+  "status": "PASS_DECLARED_WINDOWS_CODEX_SCOPE",
+  "task": "D057",
+  "version": "0.1.3",
+  "program_sha256": "f921428d77bf4de4a96b6858693e7bd0bf842a40339bffafd7ce9a993cdcb984",
+  "business_sha256": "a4c74b85b56a159f8055c062980fbd8ba230a7331dafc57182f9ddd75f07f3c8",
+  "identity": {
+    "key_id": "cad4de56f2419360eb57982bf07393355b58c2c8500095839b5a29a64cc4593f",
+    "channel": "production",
+    "verified": true
+  },
+  "reproducible_bytes": true,
+  "app_source_matches_signed_package": true,
+  "tested_repository_commit": "41f17a02c53853035465f8bd74723451bf2bb950",
+  "regression": {
+    "passed": 356,
+    "failed": 0,
+    "skipped": 0,
+    "live_deselected": 1
+  },
+  "host_distinct_cases": 50,
+  "actual_model_sessions_to_date": 12,
+  "core_blockers": [],
+  "declared_support": "Win11 build26200 x64, Codex0.167.0-alpha.3.2 / gpt-6.1-sol max; independent environment, not VM",
+  "license": "all rights reserved for original material; retained third-party notices",
+  "formal_github_release_created": false,
+  "remaining_stage_task": "D058 synthetic maintenance drill, not a D057 prerequisite",
+  "p6_all_tasks_done": true,
+  "maintenance_gate": "PASS",
+  "maintenance_evidence": "docs/gates/maintenance-ready.json",
+  "final_regression": {
+    "passed": 357,
+    "failed": 0,
+    "skipped": 0,
+    "live_deselected": 1,
+    "evidence": ".local/evidence/P6/all-final.xml"
+  }
+}

@@ -26,7 +26,7 @@ from tools.p6.record import write
 ROOT = Path(__file__).resolve().parents[2]
 
 
-def prepare(artifact_path=None, model=None, reasoning=None):
+def prepare(artifact_path=None, model=None, reasoning=None, trust_path=None):
     label = uuid.uuid4().hex[:10]
     evidence = ROOT/".local/evidence/D054"/label
     workspace = ROOT/".local/probes/p6-host"/label/"玩家 中文 空格项目"
@@ -34,7 +34,8 @@ def prepare(artifact_path=None, model=None, reasoning=None):
     data = workspace/".local/player"
     root = workspace/".hsr-program"
     artifact = artifact_path or ROOT/".local/dist/D054/program/hsr-companion-0.1.3-windows-x64.json"
-    keys = load_trust(ROOT/".local/signing/trust.json")
+    local_trust = ROOT/".local/signing/trust.json"
+    keys = load_trust(trust_path or (local_trust if local_trust.is_file() else ROOT/"install/windows-x64/trust.json"))
     manager = Installer(root, data, trusted_keys=keys)
     result = manager.install(artifact.read_bytes())
     python = root/"versions"/manager.state()["current"]["digest"]/"runtime/python.exe"
@@ -72,7 +73,7 @@ def prepare(artifact_path=None, model=None, reasoning=None):
             "rubric_sha256": hashlib.sha256((ROOT/"evals/rubric.md").read_bytes()).hexdigest(),
             "old_research_id": old_id, "old_body_sha256": hashlib.sha256(old_body.encode()).hexdigest(),
             "automatic_model_retries": 0, "max_seconds_per_batch": 600, "batches": 10, "cases": 50,
-            "authorization": "2026-11-09 user authorized P6 development and required real-host acceptance using existing model channel",
+            "authorization": "operator explicitly invoked isolated real-host acceptance using the selected existing model channel",
             "install_result": result}
     write(evidence.relative_to(ROOT)/"plan.json", plan)
     print(json.dumps({"plan": str(evidence/"plan.json"), "model_selection": selection, "codex": version, "cases": 50}, ensure_ascii=False))
@@ -179,9 +180,10 @@ def main():
     parser.add_argument("--artifact", type=Path)
     parser.add_argument("--model")
     parser.add_argument("--reasoning", choices=["low", "medium", "high", "xhigh", "max"])
+    parser.add_argument("--trust", type=Path, help="固定的生产公钥文件；默认本机身份或仓库随包公钥")
     args = parser.parse_args()
     if args.prepare:
-        prepare(args.artifact, args.model, args.reasoning)
+        prepare(args.artifact, args.model, args.reasoning, args.trust)
     else:
         run(args.plan, args.batch, args.label, args.case_ids)
 

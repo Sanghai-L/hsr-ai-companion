@@ -1,23 +1,23 @@
 # 本地性能与故障验证
 
-2026-11-09；Windows 11 build 26200、x64、Python 3.12.10。测量不包含宿主模型响应和外网延迟。全部样本保存在 .local/evidence/D053/7a60c7829f/performance.json。
+2026-11-09最终代码复测：Windows11 build26200 x64，AMD Ryzen9 9955HX，Python3.12.10。工具计时不含宿主模型或外网延迟；不是其他机器的保证。
 
-| 项目 | 样本数 | P50（ms） | P95（ms） |
+| 项目 | 样本数 | P50(ms) | P95(ms) |
 |---|---:|---:|---:|
-| account_read | 30 | 21.851 | 24.14 |
-| account_write | 30 | 16.531 | 18.848 |
-| damage_formula | 30 | 3.753 | 4.769 |
-| knowledge_cli_cold_process | 10 | 464.63 | 490.966 |
-| knowledge_search_first | 1 | 91.606 | 91.606 |
-| knowledge_search_warm | 30 | 42.056 | 44.04 |
-| knowledge_signed_local_sync_cold | 10 | 140.483 | 150.209 |
-| optional_legacy_batch_two | 3 | 2481.659 | 2542.015 |
-| optional_legacy_single | 5 | 977.307 | 4049.742 |
-| representative_batch_four | 20 | 46.198 | 63.938 |
-| representative_single_comparison | 30 | 31.073 | 33.421 |
+| account_read | 30 | 21.654 | 23.983 |
+| account_write | 30 | 17.736 | 19.822 |
+| damage_formula | 30 | 4.925 | 5.653 |
+| knowledge_cli_cold_process | 10 | 598.338 | 629.864 |
+| knowledge_search_first | 1 | 126.806 | 126.806 |
+| knowledge_search_warm | 30 | 53.778 | 64.041 |
+| knowledge_signed_local_sync_cold | 10 | 115.204 | 123.37 |
+| optional_legacy_batch_two | 3 | 2939.035 | 3026.868 |
+| optional_legacy_single | 5 | 1204.264 | 1229.171 |
+| representative_batch_four | 20 | 48.821 | 53.806 |
+| representative_single_comparison | 30 | 40.654 | 44.968 |
 
-本地热检索、简单公式和冷进程检索均达到本轮约1秒目标。首次检索只有1个样本；可选旧后端仅5次单场与3次双场，尾延迟统计只反映本轮样本。旧后端没有打进玩家包，不把它的性能等同于默认简化比较。
+本地检索、普通公式和冷进程检索满足本轮约1秒初始目标。旧后端单场／双场样本仅5／3，不把小样本尾延迟或可选后端性能当全体玩家承诺。
 
-实际故障用例包含计算子进程崩溃／超时后已回收、MCP EOF退出、安装迁移阶段进程直接退出后的日志恢复、四个并发进程跨两账号写入32条研究，以及磁盘写失败保留旧研究。同步比较还验证动作、候选、墙钟预算和协作取消；取消后不对部分结果排名。默认简化路径不启动后台工作进程，没有提供长作业队列或断点续算。
+已注入真实进程崩溃、超时回收、MCP断开、安装迁移阶段退出、跨进程共享锁与并发研究写入、磁盘不足和损坏数据库。同步比较按动作／候选／墙钟预算停止，部分结果不排名，无后台工作队列；不宣称断点续算。
 
-验证命令：python -m benchmarks.performance.run；python -m pytest tests/reliability tests/jobs tests/install tests/storage tests/updates -q -ra。后者39项通过，均为离线／真实本地进程层；不替代真实宿主模型行为。
+最终计时原始样本：.local/evidence/D053/533f0a7cfa/performance.json；早期7a60c7829f记录保留。对应故障与安装证据见D053和D051目录。
